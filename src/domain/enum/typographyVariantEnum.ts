@@ -1,0 +1,23 @@
+export enum TYPOGRAPHY_VARIANT {
+    H1 = "h1",
+    H2 = "h2",
+    H3 = "h3",
+    H4 = "h4",
+    H5 = "h5",
+    H6 = "h6",
+    LABEL = "label",
+    P1 = "p1",
+    P1_MEDIUM = "p1-medium",
+    P1_BOLD = "p1-bold",
+    P2 = "p2",
+    P2_MEDIUM = "p2-medium",
+    P2_BOLD = "p2-bold",
+    P3 = "p3",
+    P3_MEDIUM = "p3-medium",
+    P3_BOLD = "p3-bold",
+    INPUT = "input",
+    BUTTON = "button",
+    BUTTON_SM = "button-sm",
+    NAV = "nav",
+  }
+  

@@ -1,35 +1,26 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import { Routing } from "@router";
+import { Navbar } from "@ui";
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const basename = "/george-pap/";
+  const [darkMode, setDarkMode] = useState(true);
+
+  const toogleTheme = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <h2>XRISTOS SAVLIDIS</h2>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className={`${darkMode ? "dark" : ""}`}>
+      <BrowserRouter basename={basename}>
+        <div className="bg-neutral-1 dark:bg-dark-1 text-[dark-1] dark:text-light-1 transition-colors duration-200">
+          <Navbar toogleTheme={toogleTheme} />
+          <Routing />
+        </div>
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -18,7 +18,15 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Alias */
+    "baseUrl": ".",
+    "paths": {
+      "@domain": ["src/domain/index.ts"],
+      "@router": ["src/router/index.ts"],
+      "@ui": ["src/ui/index.ts"]
+    }
   },
   "include": ["src"]
 }
