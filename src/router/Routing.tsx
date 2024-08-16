@@ -1,4 +1,5 @@
 import { PATHS } from "@domain";
+import { PortfolioPage, SkillsPage, ContactPage } from "@ui";
 import { FC, lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
@@ -22,7 +23,7 @@ export const Routing: FC = () => {
           path={PATHS.PORTFOLIO}
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <HomePage />
+              <PortfolioPage />
             </Suspense>
           }
         />
@@ -31,7 +32,7 @@ export const Routing: FC = () => {
           path={PATHS.SKILLS}
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <HomePage />
+              <SkillsPage />
             </Suspense>
           }
         />
@@ -40,7 +41,7 @@ export const Routing: FC = () => {
           path={PATHS.CONTACT}
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <HomePage />
+              <ContactPage />
             </Suspense>
           }
         />

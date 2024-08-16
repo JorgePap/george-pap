@@ -1,6 +1,6 @@
 export enum PATHS {
     HOME = "/",
-    PORTFOLIO = "portfolio",
-    SKILLS = "skills",
-    CONTACT = "contact"
+    PORTFOLIO = "/portfolio",
+    SKILLS = "/skills",
+    CONTACT = "/contact"
 }

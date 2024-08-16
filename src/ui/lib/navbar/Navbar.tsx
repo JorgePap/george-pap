@@ -17,7 +17,7 @@ export const Navbar: FC<{ toogleTheme?: () => void }> = ({ toogleTheme }) => {
   };
 
   return (
-    <nav className="fixed w-full z-50 md:top-[50px] md:px-[80px] lg:px-[100px]">
+    <nav className="fixed w-full z-50 md:top-[50px] md:px-[110px] lg:px-[120px]">
       {/* navbar */}
       <div className="flex justify-end md:justify-start relative py-sm">
         {/* desktop nav */}
@@ -50,7 +50,7 @@ export const Navbar: FC<{ toogleTheme?: () => void }> = ({ toogleTheme }) => {
       </div>
 
       {/* mobile nav */}
-      <div className="relative">
+      <div className="relative bg-neutral-1 dark:bg-dark-1">
         <Drawer isDrawerOpen={mobileNavIsOpen}>
           <AllLinks
             className="items-center"
