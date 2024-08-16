@@ -1,1 +1,0 @@
-import{j as e}from"./index-DFElz3UK.js";const p=()=>e.jsx("div",{className:"h-dvh md:pt-[150px] md:px-[80px] lg:px-[100px]",children:e.jsx("div",{children:"HomePage"})});export{p as HomePage,p as default};
