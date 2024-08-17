@@ -1,44 +1,22 @@
-import { PATHS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
+import { PATHS } from "@domain";
 import { FC } from "react";
-import { RoutingButton, Typography } from "@ui";
+import { RoutingButton } from "@ui";
+import { HeroSection } from "./components/hero-section";
+import { MeSection } from "./components/me-section";
 
 export const HomePage: FC = () => {
-  return (
-    <div className="h-dvh md:pt-[150px] lg:pt-[180px] md:px-[110px] lg:px-[120px] overflow-x-hidden relative">
-      <div className="h-[100%]">
-        {/* hero with Scroll down starts*/}
-        <div className="flex flex-col h-[100%] justify-between xl:pb-[100px] ">
-          <div className="flex flex-col text-wrap">
-            <Typography
-              element={TYPOGRAPHY_ELEMENT.H3}
-              variant={TYPOGRAPHY_VARIANT.H1}
-              text="Hello,"
-              classes="tracking-tight"
-            />
-            <Typography
-              element={TYPOGRAPHY_ELEMENT.H3}
-              variant={TYPOGRAPHY_VARIANT.H1}
-              text="I'm George Papastergiopoulos"
-              classes="tracking-tighter"
-            />
-          </div>
-          <div className="flex justify-between">
-            <Typography
-              element={TYPOGRAPHY_ELEMENT.P}
-              variant={TYPOGRAPHY_VARIANT.BUTTON_SM}
-              text="Scroll down"
-            />
-            <Typography
-              element={TYPOGRAPHY_ELEMENT.LABEL}
-              variant={TYPOGRAPHY_VARIANT.LABEL}
-              text="Front-end Developer"
-            />
-          </div>
-        </div>
-        {/* hero with Scroll down ends*/}
+  const scrollByVH = () => {
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
 
-        <div>Me text and picture+resume</div>
-      </div>
+  return (
+    <div className="md:px-[115px] lg:px-[125px] overflow-x-hidden ">
+      {/* Hero Section with Scroll down starts*/}
+      <HeroSection onClick={scrollByVH} />
+      <MeSection />
       <RoutingButton to={PATHS.PORTFOLIO} text={"Portfolio"} left={false} />
     </div>
   );
