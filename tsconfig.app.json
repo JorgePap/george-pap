@@ -25,7 +25,8 @@
     "paths": {
       "@domain": ["src/domain/index.ts"],
       "@router": ["src/router/index.ts"],
-      "@ui": ["src/ui/index.ts"]
+      "@ui": ["src/ui/index.ts"],
+      "@assets": ["src/assets/index.ts"]
     }
   },
   "include": ["src"]

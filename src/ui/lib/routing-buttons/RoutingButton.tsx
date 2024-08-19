@@ -11,10 +11,10 @@ export const RoutingButton: FC<{
   return (
     <div className="group hidden md:block">
       <div
-        className={`flex flex-col md:w-[105px] lg:w-[115px] 
+        className={`flex flex-col md:w-[85px] lg:w-[100px] 
           justify-center items-center gap-md px-lg 
           fixed h-screen top-[0px] bottom-[0px] 
-          h-full bg-white dark:bg-dark-1 rounded-l-lg z-0
+          h-full bg-white dark:bg-dark-1 rounded-l-lg z-40
           ${left ? "left-[0px]" : "right-[0px]"}`}
       >
         <Iconography
@@ -33,11 +33,11 @@ export const RoutingButton: FC<{
       <NavLink
         to={to}
         replace
-        className={`flex flex-col md:w-[105px] lg:w-[115px] 
+        className={`flex flex-col md:w-[85px] lg:w-[100px] 
               justify-center items-center gap-md px-lg bg-white dark:bg-[#6272A4]
               fixed h-screen top-[0px] bottom-[0px] transform
               ease-in-out duration-200 group-hover:translate-x-[0px]
-              group-hover:z-10
+              group-hover:z-50
               ${
                 left
                   ? "left-[0px] translate-x-[-100%] rounded-r-lg"

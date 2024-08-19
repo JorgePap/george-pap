@@ -17,7 +17,7 @@ export const Navbar: FC<{ toogleTheme?: () => void }> = ({ toogleTheme }) => {
   };
 
   return (
-    <nav className="fixed w-full z-50 md:top-[50px] md:px-[110px] lg:px-[120px]">
+    <nav className="fixed w-full z-40 md:pt-[20px] md:top-[0px] md:px-[110px] lg:px-[120px] bg-neutral-1 dark:bg-dark-1">
       {/* navbar */}
       <div className="flex justify-end md:justify-start relative py-sm">
         {/* desktop nav */}

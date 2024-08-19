@@ -5,12 +5,16 @@ import { ProjectsSection } from "./components";
 
 export const PortfolioPage: FC = () => {
   return (
-    <div className="h-dvh md:pt-[150px] lg:pt-[180px] md:px-[115px] lg:px-[125px] overflow-x-hidden relative">
+    <div
+      className="h-dvh md:pt-[110px] lg:pt-[140px] md:px-[115px] 
+                    lg:px-[125px] overflow-x-hidden relative"
+    >
       <div className="flex flex-col gap-2xl">
         <Typography
           element={TYPOGRAPHY_ELEMENT.H3}
-          variant={TYPOGRAPHY_VARIANT.H3}
+          variant={TYPOGRAPHY_VARIANT.TITLE}
           text="Portfolio"
+          color="text-transparent"
         />
         <ProjectsSection />
       </div>

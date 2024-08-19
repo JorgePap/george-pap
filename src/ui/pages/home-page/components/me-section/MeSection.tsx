@@ -4,7 +4,7 @@ import { Typography } from "@ui";
 
 export const MeSection: FC = () => {
   return (
-    <div className="min-h-screen md:pt-[150px] lg:pt-[200px] flex">
+    <div className="min-h-screen md:pt-[120px] lg:pt-[120px] flex">
       <div className="flex flex-col gap-xl basis-1/2">
         <Typography
           element={TYPOGRAPHY_ELEMENT.H3}

@@ -9,6 +9,7 @@ export const typographyVariations = ({
   //TODO Add colors
   //TODO Add font Style
   const variants: Record<TYPOGRAPHY_VARIANT, string> = {
+    [tv.TITLE]: "font-title text-3xl font-regular",
     [tv.H1]: "font-heading text-4xl font-regular",
     [tv.H2]: "font-heading text-3xl font-regular",
     [tv.H3]: "font-heading text-2xl font-regular",

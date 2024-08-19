@@ -5,7 +5,7 @@ import { FC } from "react";
 export const HeroSection: FC<{ onClick: () => void }> = ({ onClick }) => {
   return (
     <div className="min-h-screen flex flex-col justify-between">
-      <div className="md:pt-[150px] lg:pt-[180px] flex flex-col text-wrap ">
+      <div className="md:pt-[120px] lg:pt-[120px] flex flex-col text-wrap ">
         <Typography
           element={TYPOGRAPHY_ELEMENT.H3}
           variant={TYPOGRAPHY_VARIANT.H1}
