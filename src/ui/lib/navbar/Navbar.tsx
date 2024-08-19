@@ -19,7 +19,7 @@ export const Navbar: FC<{ toogleTheme?: () => void }> = ({ toogleTheme }) => {
   return (
     <nav className="fixed w-full z-40 md:pt-[20px] md:top-[0px] md:px-[110px] lg:px-[120px] bg-neutral-1 dark:bg-dark-1">
       {/* navbar */}
-      <div className="flex justify-end md:justify-start relative py-sm">
+      <div className="flex justify-end md:justify-start relative md:py-sm">
         {/* desktop nav */}
         <div className="hidden md:flex">
           <AllLinks
@@ -29,7 +29,10 @@ export const Navbar: FC<{ toogleTheme?: () => void }> = ({ toogleTheme }) => {
           />
           <ButtonMore toogleTheme={toogleTheme} />
         </div>
-        <div className="md:hidden" onClick={toggleMobileNavBar}>
+        <div
+          className="pt-[10px] pr-[10px] md:hidden md:p-0 "
+          onClick={toggleMobileNavBar}
+        >
           {!mobileNavIsOpen && (
             <Iconography
               icon={ICONS.MENU}
@@ -52,12 +55,14 @@ export const Navbar: FC<{ toogleTheme?: () => void }> = ({ toogleTheme }) => {
       {/* mobile nav */}
       <div className="relative bg-neutral-1 dark:bg-dark-1">
         <Drawer isDrawerOpen={mobileNavIsOpen}>
-          <AllLinks
-            className="items-center"
-            typographyElement={TYPOGRAPHY_ELEMENT.H3}
-            typographyVariant={TYPOGRAPHY_VARIANT.H2}
-          />
-          <ButtonMore toogleTheme={toogleTheme} />
+          <div className="flex flex-col pt-[50px]">
+            <AllLinks
+              className="items-center"
+              typographyElement={TYPOGRAPHY_ELEMENT.H3}
+              typographyVariant={TYPOGRAPHY_VARIANT.H2}
+            />
+            <ButtonMore toogleTheme={toogleTheme} />
+          </div>
         </Drawer>
       </div>
     </nav>

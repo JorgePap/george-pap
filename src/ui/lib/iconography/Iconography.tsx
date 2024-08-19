@@ -2,6 +2,10 @@ import { ICONS } from "@domain";
 import { FC } from "react";
 import MenuIcon from "./MenuIcon";
 import CloseIcon from "./CloseIcon";
+import ArrowUp from "./ArrowUp";
+import ArrowDown from "./ArrowDown";
+import ArrowLeft from "./ArrowLeft";
+import ArrowRight from "./ArrowRight";
 
 export interface Props {
   icon: ICONS;
@@ -36,6 +40,14 @@ export const Iconography: FC<Props> = ({
       return <MenuIcon {...attributes} />;
     case ICONS.CLOSE:
       return <CloseIcon {...attributes} />;
+    case ICONS.ARROW_UP:
+      return <ArrowUp {...attributes} />;
+    case ICONS.ARROW_DOWN:
+      return <ArrowDown {...attributes} />;
+    case ICONS.ARROW_LEFT:
+      return <ArrowLeft {...attributes} />;
+    case ICONS.ARROW_RIGHT:
+      return <ArrowRight {...attributes} />;
     default:
       return <div></div>;
   }

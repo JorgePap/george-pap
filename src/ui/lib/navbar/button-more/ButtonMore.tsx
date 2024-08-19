@@ -25,12 +25,22 @@ export const ButtonMore: FC<{ toogleTheme?: () => void }> = ({
           text="More"
           color="text-[light-1] dark:text-[#C2C3C0]"
         />
-        <Iconography
-          icon={ICONS.CLOSE}
-          width="24"
-          height="24"
-          classes="stroke-dark-1 dark:stroke-neutral-1"
-        />
+        {!isOpen && (
+          <Iconography
+            icon={ICONS.ARROW_DOWN}
+            width="24"
+            height="24"
+            classes="stroke-dark-1 dark:stroke-neutral-1"
+          />
+        )}
+        {isOpen && (
+          <Iconography
+            icon={ICONS.ARROW_UP}
+            width="24"
+            height="24"
+            classes="stroke-dark-1 dark:stroke-neutral-1"
+          />
+        )}
       </div>
 
       {isOpen && (

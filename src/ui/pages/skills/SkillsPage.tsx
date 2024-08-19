@@ -6,7 +6,7 @@ import { SkillsAndXpSection } from "./components";
 export const SkillsPage: FC = () => {
   return (
     <div
-      className="h-dvh md:pt-[110px] lg:pt-[140px] md:px-[115px] 
+      className="h-dvh pt-[80px] md:pt-[110px] lg:pt-[140px] px-[30px] md:px-[115px] 
                     lg:px-[125px] overflow-x-hidden relative"
     >
       <div className="flex flex-col gap-2xl">
@@ -18,9 +18,9 @@ export const SkillsPage: FC = () => {
             color="text-transparent"
           />
         </div>
-        <div className="flex">
-          <SkillsAndXpSection className="basis-1/2" />
-          <div className="basis-1/2 flex flex-col gap-xl pr-2xl">
+        <div className="flex flex-col md:flex-row gap-2xl">
+          <SkillsAndXpSection className="md:basis-1/2" />
+          <div className="md:basis-1/2 flex flex-col gap-xl pr-2xl">
             <Typography
               element={TYPOGRAPHY_ELEMENT.P}
               variant={TYPOGRAPHY_VARIANT.P1}

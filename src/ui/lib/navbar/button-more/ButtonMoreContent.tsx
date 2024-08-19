@@ -17,7 +17,7 @@ export const ButtonMoreContent: FC<{ toogleTheme?: () => void }> = ({
       <div className="flex">
         {languageIsOpen && (
           <Iconography
-            icon={ICONS.MENU}
+            icon={ICONS.ARROW_LEFT}
             width="18"
             height="18"
             classes="stroke-dark-1 dark:stroke-neutral-1"
@@ -47,7 +47,7 @@ export const ButtonMoreContent: FC<{ toogleTheme?: () => void }> = ({
             text="Language"
           />
           <Iconography
-            icon={ICONS.CLOSE}
+            icon={ICONS.ARROW_RIGHT}
             width="18"
             height="18"
             classes="stroke-dark-1 dark:stroke-neutral-1"

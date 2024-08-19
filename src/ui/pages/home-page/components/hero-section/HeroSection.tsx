@@ -5,7 +5,7 @@ import { FC } from "react";
 export const HeroSection: FC<{ onClick: () => void }> = ({ onClick }) => {
   return (
     <div className="min-h-screen flex flex-col justify-between">
-      <div className="md:pt-[120px] lg:pt-[120px] flex flex-col text-wrap ">
+      <div className="pt-[80px] md:pt-[120px] lg:pt-[120px] flex flex-col text-wrap ">
         <Typography
           element={TYPOGRAPHY_ELEMENT.H3}
           variant={TYPOGRAPHY_VARIANT.H1}
@@ -15,12 +15,18 @@ export const HeroSection: FC<{ onClick: () => void }> = ({ onClick }) => {
         <Typography
           element={TYPOGRAPHY_ELEMENT.H3}
           variant={TYPOGRAPHY_VARIANT.H1}
-          text="I'm George Papastergiopoulos"
+          text="I'm George"
+          classes="tracking-tighter"
+        />
+        <Typography
+          element={TYPOGRAPHY_ELEMENT.H3}
+          variant={TYPOGRAPHY_VARIANT.H1}
+          text="Papastergiopoulos"
           classes="tracking-tighter"
         />
       </div>
       {/* Scroll down Starts */}
-      <div className="flex justify-between md:pb-[50px] lg:pb-[50px]">
+      <div className="flex justify-between pb-[30px] md:pb-[50px] lg:pb-[50px]">
         <div onClick={onClick}>
           <Typography
             element={TYPOGRAPHY_ELEMENT.P}

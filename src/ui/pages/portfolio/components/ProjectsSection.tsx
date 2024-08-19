@@ -13,8 +13,8 @@ export const ProjectsSection: FC = () => {
         classes="text-dark-1 dark:text-neutral-1"
       />
       <div
-        className="flex flex-shrink-0 overflow-x-scroll
-                    gap-xl"
+        className="flex flex-col md:flex-row flex-shrink-0 overflow-x-scroll
+                    gap-xl pb-[20px]"
       >
         <ProjectsItem title={"Kardias"} text={"Kardias is a project"} />
         <ProjectsItem title={"Kardias"} text={"Kardias is a project"} />

@@ -6,7 +6,7 @@ import { ProjectsSection } from "./components";
 export const PortfolioPage: FC = () => {
   return (
     <div
-      className="h-dvh md:pt-[110px] lg:pt-[140px] md:px-[115px] 
+      className="h-dvh pt-[80px] md:pt-[110px] lg:pt-[140px] px-[30px] md:px-[115px] 
                     lg:px-[125px] overflow-x-hidden relative"
     >
       <div className="flex flex-col gap-2xl">

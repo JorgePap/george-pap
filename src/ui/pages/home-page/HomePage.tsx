@@ -13,7 +13,7 @@ export const HomePage: FC = () => {
   };
 
   return (
-    <div className="md:px-[115px] lg:px-[125px] overflow-x-hidden ">
+    <div className="px-[30px] md:px-[115px] lg:px-[125px] overflow-x-hidden ">
       {/* Hero Section with Scroll down starts*/}
       <HeroSection onClick={scrollByVH} />
       <MeSection />
