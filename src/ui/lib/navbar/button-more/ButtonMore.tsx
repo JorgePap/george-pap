@@ -4,9 +4,10 @@ import { ICONS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import { Iconography } from "../../iconography";
 import ButtonMoreContent from "./ButtonMoreContent";
 
-export const ButtonMore: FC<{ toogleTheme?: () => void }> = ({
-  toogleTheme,
-}) => {
+export const ButtonMore: FC<{
+  toogleTheme?: () => void;
+  darkMode: boolean;
+}> = ({ toogleTheme, darkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toogleButton = () => {
@@ -45,7 +46,7 @@ export const ButtonMore: FC<{ toogleTheme?: () => void }> = ({
 
       {isOpen && (
         <div>
-          <ButtonMoreContent toogleTheme={toogleTheme} />
+          <ButtonMoreContent toogleTheme={toogleTheme} darkMode={darkMode} />
         </div>
       )}
     </div>

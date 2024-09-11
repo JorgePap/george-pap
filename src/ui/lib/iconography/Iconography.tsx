@@ -6,6 +6,9 @@ import ArrowUp from "./ArrowUp";
 import ArrowDown from "./ArrowDown";
 import ArrowLeft from "./ArrowLeft";
 import ArrowRight from "./ArrowRight";
+import AmericanFlag from "./AmericanFlag";
+import Sun from "./Sun";
+import Moon from "./Moon";
 
 export interface Props {
   icon: ICONS;
@@ -48,6 +51,12 @@ export const Iconography: FC<Props> = ({
       return <ArrowLeft {...attributes} />;
     case ICONS.ARROW_RIGHT:
       return <ArrowRight {...attributes} />;
+    case ICONS.AMERICAN_FLAG:
+      return <AmericanFlag {...attributes} />;
+    case ICONS.SUN:
+      return <Sun {...attributes} />;
+    case ICONS.MOON:
+      return <Moon {...attributes} />;
     default:
       return <div></div>;
   }

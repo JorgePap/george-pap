@@ -3,9 +3,10 @@ import { Typography } from "../../typography";
 import { ICONS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import { Iconography } from "../../iconography";
 
-export const ButtonMoreContent: FC<{ toogleTheme?: () => void }> = ({
-  toogleTheme,
-}) => {
+export const ButtonMoreContent: FC<{
+  toogleTheme?: () => void;
+  darkMode: boolean;
+}> = ({ toogleTheme, darkMode }) => {
   const [languageIsOpen, setLanguageIsOpen] = useState(false);
 
   const toogleLanguage = () => {
@@ -13,7 +14,11 @@ export const ButtonMoreContent: FC<{ toogleTheme?: () => void }> = ({
   };
 
   return (
-    <div className="flex flex-col max-w-[300px] mx-auto gap-md md:absolute md:top-[50px] md:left-[0px] md:translate-x-[-25%] dark:bg-[#2D2A39] p-sm rounded-lg">
+    <div
+      className="flex flex-col max-w-[300px] mx-auto gap-md md:absolute md:top-[50px]
+                    md:left-[0px] md:translate-x-[-25%] dark:bg-[#2D2A39] p-sm rounded-lg
+                    lg:top-[60px]"
+    >
       <div className="flex">
         {languageIsOpen && (
           <Iconography
@@ -36,10 +41,8 @@ export const ButtonMoreContent: FC<{ toogleTheme?: () => void }> = ({
           className="flex w-full justify-between md:min-w-[200px] items-center dark:bg-[#454158] rounded-lg p-xs"
         >
           <Iconography
-            icon={ICONS.CLOSE}
-            width="18"
-            height="18"
-            classes="stroke-dark-1 dark:stroke-neutral-1"
+            icon={ICONS.AMERICAN_FLAG}
+            classes="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[28px] lg:h-[28px]"
           />
           <Typography
             element={TYPOGRAPHY_ELEMENT.P}
@@ -57,12 +60,18 @@ export const ButtonMoreContent: FC<{ toogleTheme?: () => void }> = ({
           onClick={toogleTheme}
           className="flex w-full justify-between md:min-w-[200px] items-center dark:bg-[#454158] rounded-lg p-xs"
         >
-          <Iconography
-            icon={ICONS.CLOSE}
-            width="18"
-            height="18"
-            classes="stroke-dark-1 dark:stroke-neutral-1"
-          />
+          {darkMode ? (
+            <Iconography
+              icon={ICONS.SUN}
+              classes="fill-[#fcdb33] w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[28px] lg:h-[28px]"
+            />
+          ) : (
+            <Iconography
+              icon={ICONS.MOON}
+              classes="fill-[#fcdb33] w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[28px] lg:h-[28px]"
+            />
+          )}
+
           <Typography
             element={TYPOGRAPHY_ELEMENT.P}
             variant={TYPOGRAPHY_VARIANT.P1}

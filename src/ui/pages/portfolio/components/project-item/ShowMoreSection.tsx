@@ -3,7 +3,7 @@ import { Typography } from "@ui";
 import { TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import TechItem from "./TechItem";
 
-export const ShowMoreSection: FC = () => {
+export const ShowMoreSection: FC<{ techNames: string[] }> = ({ techNames }) => {
   return (
     <div className="flex flex-col gap-sm dark:bg-[#2E2B3A]">
       <Typography
@@ -14,10 +14,9 @@ export const ShowMoreSection: FC = () => {
       />
       <div className="flex flex-col gap-md">
         <div className="flex flex-wrap gap-xs">
-          <TechItem techName={"Typescript"} />
-          <TechItem techName={"Tailwind"} />
-          <TechItem techName={"Git"} />
-          <TechItem techName={"Next"} />
+          {techNames.map((techName) => (
+            <TechItem techName={techName} />
+          ))}
         </div>
         <div className="py-sm px-xl w-max bg-neutral-1 dark:bg-[#444057] rounded-full self-center">
           <Typography

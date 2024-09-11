@@ -3,10 +3,12 @@ import { FC, useState } from "react";
 import { Iconography, Typography } from "@ui";
 import ShowMoreSection from "./ShowMoreSection";
 
-export const ProjectsItem: FC<{ title: string; text: string }> = ({
-  title,
-  text,
-}) => {
+export const ProjectsItem: FC<{
+  title: string;
+  text: string;
+  techNames: string[];
+  classes?: string;
+}> = ({ title, text, techNames, classes }) => {
   const [showMore, setShowMore] = useState(false);
 
   const toggleShowMore = () => {
@@ -15,10 +17,9 @@ export const ProjectsItem: FC<{ title: string; text: string }> = ({
 
   return (
     <div
-      className="min-w-[290px] min-h-[290px] border border-dark-1 dark:border-neutral-1
-                     rounded-lg relative"
+      className={`min-w-[290px] min-h-[290px] lg:min-w-[400px] lg:min-h-[350px] border border-dark-1 dark:border-neutral-1
+                     rounded-lg relative ${classes}`}
     >
-      bg img
       {/* inner box */}
       <div
         className="absolute w-full bottom-[0px] rounded-lg h-max bg-neutral-1 
@@ -31,13 +32,15 @@ export const ProjectsItem: FC<{ title: string; text: string }> = ({
             text={title}
             classes="text-dark-1 dark:text-neutral-1"
           />
-          <Iconography
-            icon={ICONS.MENU}
-            width="18"
-            height="18"
-            classes="stroke-dark-1 dark:stroke-neutral-1"
-            onClick={toggleShowMore}
-          />
+          <div className={`${showMore && "rotate-180"}`}>
+            <Iconography
+              icon={ICONS.ARROW_UP}
+              width="18"
+              height="18"
+              classes="stroke-dark-1 dark:stroke-neutral-1"
+              onClick={toggleShowMore}
+            />
+          </div>
         </div>
         <Typography
           element={TYPOGRAPHY_ELEMENT.P}
@@ -47,7 +50,7 @@ export const ProjectsItem: FC<{ title: string; text: string }> = ({
         />
         {showMore && (
           <div>
-            <ShowMoreSection />
+            <ShowMoreSection techNames={techNames} />
           </div>
         )}
       </div>

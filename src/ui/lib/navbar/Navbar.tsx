@@ -4,7 +4,10 @@ import { ICONS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import AllLinks from "./all-links/AllLinks";
 import { ButtonMore } from "./button-more";
 
-export const Navbar: FC<{ toogleTheme?: () => void }> = ({ toogleTheme }) => {
+export const Navbar: FC<{ toogleTheme?: () => void; darkMode: boolean }> = ({
+  toogleTheme,
+  darkMode,
+}) => {
   const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
 
   const toggleMobileNavBar = () => {
@@ -27,7 +30,7 @@ export const Navbar: FC<{ toogleTheme?: () => void }> = ({ toogleTheme }) => {
             typographyVariant={TYPOGRAPHY_VARIANT.H5}
             className="self-start"
           />
-          <ButtonMore toogleTheme={toogleTheme} />
+          <ButtonMore toogleTheme={toogleTheme} darkMode={darkMode} />
         </div>
         <div
           className="pt-[10px] pr-[10px] md:hidden md:p-0 "

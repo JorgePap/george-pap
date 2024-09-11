@@ -16,7 +16,7 @@ function App() {
     <div className={`${darkMode ? "dark" : ""}`}>
       <BrowserRouter basename={basename}>
         <div className="bg-neutral-1 dark:bg-dark-1 text-[dark-1] dark:text-light-1 transition-colors duration-200">
-          <Navbar toogleTheme={toogleTheme} />
+          <Navbar toogleTheme={toogleTheme} darkMode={darkMode} />
           <Routing />
         </div>
       </BrowserRouter>
