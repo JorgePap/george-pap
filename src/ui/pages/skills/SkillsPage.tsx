@@ -1,4 +1,4 @@
-import { PATHS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
+import { ICONS, PATHS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import { RoutingButton, Typography } from "@ui";
 import { FC } from "react";
 import { SkillsAndXpSection } from "./components";
@@ -41,8 +41,18 @@ export const SkillsPage: FC = () => {
         </div>
       </div>
 
-      <RoutingButton to={PATHS.PORTFOLIO} text={"Portfolio"} left={true} />
-      <RoutingButton to={PATHS.CONTACT} text={"Contact"} left={false} />
+      <RoutingButton
+        to={PATHS.PORTFOLIO}
+        text={"Portfolio"}
+        left={true}
+        routeIcon={ICONS.ARROW_LEFT}
+      />
+      <RoutingButton
+        to={PATHS.CONTACT}
+        text={"Contact"}
+        left={false}
+        routeIcon={ICONS.ARROW_RIGHT}
+      />
     </div>
   );
 };

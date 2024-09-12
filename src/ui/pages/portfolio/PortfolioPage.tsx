@@ -1,4 +1,4 @@
-import { PATHS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
+import { ICONS, PATHS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import { RoutingButton, Typography } from "@ui";
 import { FC } from "react";
 import { ProjectsSection } from "./components";
@@ -18,8 +18,18 @@ export const PortfolioPage: FC = () => {
         />
         <ProjectsSection />
       </div>
-      <RoutingButton to={PATHS.HOME} text={"Home"} left={true} />
-      <RoutingButton to={PATHS.SKILLS} text={"Skills"} left={false} />
+      <RoutingButton
+        to={PATHS.HOME}
+        text={"Home"}
+        left={true}
+        routeIcon={ICONS.ARROW_LEFT}
+      />
+      <RoutingButton
+        to={PATHS.SKILLS}
+        text={"Skills"}
+        left={false}
+        routeIcon={ICONS.ARROW_RIGHT}
+      />
     </div>
   );
 };

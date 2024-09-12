@@ -1,4 +1,4 @@
-import { PATHS } from "@domain";
+import { ICONS, PATHS } from "@domain";
 import { FC } from "react";
 import { RoutingButton } from "@ui";
 import { HeroSection } from "./components/hero-section";
@@ -17,7 +17,12 @@ export const HomePage: FC = () => {
       {/* Hero Section with Scroll down starts*/}
       <HeroSection onClick={scrollByVH} />
       <MeSection />
-      <RoutingButton to={PATHS.PORTFOLIO} text={"Portfolio"} left={false} />
+      <RoutingButton
+        to={PATHS.PORTFOLIO}
+        text={"Portfolio"}
+        left={false}
+        routeIcon={ICONS.ARROW_RIGHT}
+      />
     </div>
   );
 };

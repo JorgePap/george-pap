@@ -64,7 +64,7 @@ export const Navbar: FC<{ toogleTheme?: () => void; darkMode: boolean }> = ({
               typographyElement={TYPOGRAPHY_ELEMENT.H3}
               typographyVariant={TYPOGRAPHY_VARIANT.H2}
             />
-            <ButtonMore toogleTheme={toogleTheme} />
+            <ButtonMore toogleTheme={toogleTheme} darkMode={darkMode} />
           </div>
         </Drawer>
       </div>

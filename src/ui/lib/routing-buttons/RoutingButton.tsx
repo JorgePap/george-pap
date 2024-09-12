@@ -7,7 +7,8 @@ export const RoutingButton: FC<{
   to: string;
   text: string;
   left: boolean;
-}> = ({ to, text, left }) => {
+  routeIcon: ICONS;
+}> = ({ to, text, left, routeIcon }) => {
   return (
     <div className="group hidden md:block">
       <div
@@ -18,7 +19,7 @@ export const RoutingButton: FC<{
           ${left ? "left-[0px]" : "right-[0px]"}`}
       >
         <Iconography
-          icon={ICONS.CLOSE}
+          icon={routeIcon}
           width="24"
           height="24"
           classes="stroke-dark-1 dark:stroke-neutral-1"
@@ -45,7 +46,7 @@ export const RoutingButton: FC<{
               }`}
       >
         <Iconography
-          icon={ICONS.CLOSE}
+          icon={routeIcon}
           width="24"
           height="24"
           classes="stroke-dark-1 dark:stroke-neutral-1"
