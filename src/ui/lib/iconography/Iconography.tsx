@@ -9,6 +9,7 @@ import ArrowRight from "./ArrowRight";
 import AmericanFlag from "./AmericanFlag";
 import Sun from "./Sun";
 import Moon from "./Moon";
+import ThemeChangeIcon from "./ThemeChangeIcon";
 
 export interface Props {
   icon: ICONS;
@@ -57,6 +58,8 @@ export const Iconography: FC<Props> = ({
       return <Sun {...attributes} />;
     case ICONS.MOON:
       return <Moon {...attributes} />;
+    case ICONS.THEME_CHANGE_ICON:
+      return <ThemeChangeIcon {...attributes} />;
     default:
       return <div></div>;
   }

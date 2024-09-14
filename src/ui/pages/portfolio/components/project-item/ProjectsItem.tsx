@@ -1,5 +1,5 @@
 import { ICONS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
-import { FC, useState } from "react";
+import { CSSProperties, FC, useState } from "react";
 import { Iconography, Typography } from "@ui";
 import ShowMoreSection from "./ShowMoreSection";
 
@@ -8,7 +8,8 @@ export const ProjectsItem: FC<{
   text: string;
   techNames: string[];
   classes?: string;
-}> = ({ title, text, techNames, classes }) => {
+  style?: CSSProperties | undefined;
+}> = ({ title, text, techNames, classes, style }) => {
   const [showMore, setShowMore] = useState(false);
 
   const toggleShowMore = () => {
@@ -19,6 +20,7 @@ export const ProjectsItem: FC<{
     <div
       className={`min-w-[290px] min-h-[290px] lg:min-w-[400px] lg:min-h-[350px] border border-dark-1 dark:border-neutral-1
                      rounded-lg relative ${classes}`}
+      style={style}
     >
       {/* inner box */}
       <div

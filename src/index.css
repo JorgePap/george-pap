@@ -10,7 +10,15 @@
 
 .font-title{
   font-family: 'Poppins', sans-serif;
-  -webkit-text-stroke: 1px white;
+  /* -webkit-text-stroke: 1px white;; */
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1px #EAEAE6;
+}
+
+.text-stroke-black {
+  -webkit-text-stroke: 1px black;
 }
 
 .font-heading {

@@ -15,7 +15,7 @@ export const RoutingButton: FC<{
         className={`flex flex-col md:w-[85px] lg:w-[100px] 
           justify-center items-center gap-md px-lg 
           fixed h-screen top-[0px] bottom-[0px] 
-          h-full bg-white dark:bg-dark-1 rounded-l-lg z-40
+          h-full neutral-1 dark:bg-dark-1 rounded-l-lg z-40
           ${left ? "left-[0px]" : "right-[0px]"}`}
       >
         <Iconography
@@ -35,8 +35,8 @@ export const RoutingButton: FC<{
         to={to}
         replace
         className={`flex flex-col md:w-[85px] lg:w-[100px] 
-              justify-center items-center gap-md px-lg bg-white dark:bg-[#6272A4]
-              fixed h-screen top-[0px] bottom-[0px] transform
+              justify-center items-center gap-md px-lg bg-neutral-5 dark:bg-[#6272A4]
+              fixed h-screen top-0 bottom-0 transform
               ease-in-out duration-200 group-hover:translate-x-[0px]
               group-hover:z-50
               ${

@@ -14,7 +14,7 @@ export const PortfolioPage: FC = () => {
           element={TYPOGRAPHY_ELEMENT.H3}
           variant={TYPOGRAPHY_VARIANT.TITLE}
           text="Portfolio"
-          color="text-transparent"
+          color="text-transparent text-stroke-black dark:text-stroke-white"
         />
         <ProjectsSection />
       </div>

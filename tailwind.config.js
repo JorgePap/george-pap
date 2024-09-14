@@ -126,6 +126,16 @@ export default {
       },
     },
   },
-  plugins: [],
-  darkMode: "class",
+  plugins: [ function ({ addUtilities }) {
+    const newUtilities = {
+      '.text-stroke-white': {
+        '-webkit-text-stroke': '1px white',
+      },
+      '.text-stroke-black': {
+        '-webkit-text-stroke': '1px black',
+      },
+    };
+    addUtilities(newUtilities, ['responsive', 'hover', 'dark']);
+  },],
+  darkMode: "class", // Enable dark mode with the 'class' strategy
 };

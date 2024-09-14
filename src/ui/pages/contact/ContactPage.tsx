@@ -15,7 +15,7 @@ export const ContactPage: FC = () => {
             element={TYPOGRAPHY_ELEMENT.H3}
             variant={TYPOGRAPHY_VARIANT.TITLE}
             text="Contact"
-            color="text-transparent"
+            color="text-transparent text-stroke-black dark:text-stroke-white"
           />
         </div>
         <div className="flex flex-col self-center items-center gap-lg w-full">

@@ -2,6 +2,7 @@ import { FC } from "react";
 import ProjectsItem from "./project-item/ProjectsItem";
 import { Typography } from "@ui";
 import { TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
+import KardiasPhoto from "../../../../assets/kardias-project.jpg";
 
 export const ProjectsSection: FC = () => {
   return (
@@ -25,21 +26,37 @@ export const ProjectsSection: FC = () => {
             "Vite",
             "React",
             "Typescript",
+            "Redux-Toolkit",
             "Tailwind",
             "Node.js",
             "Git",
           ]}
-          classes="bg-[url(C:\Projects\george-pap\src\assets\kardias-project.jpg)] bg-center"
+          classes="bg-center"
+          style={{ backgroundImage: `url(${KardiasPhoto})` }}
         />
         <ProjectsItem
-          title={"Kardias"}
-          text={"Kardias is a project"}
-          techNames={[]}
+          title={"Stratakis Lab"}
+          text={"Stratakis Lab is a project"}
+          techNames={[
+            "Vite",
+            "React",
+            "Typescript",
+            "Redux-Toolkit",
+            "Tailwind",
+            "Git",
+          ]}
         />
         <ProjectsItem
-          title={"Kardias"}
-          text={"Kardias is a project"}
-          techNames={[]}
+          title={"Whether"}
+          text={"Weather is a personal project that provides weather forecasts"}
+          techNames={[
+            "Vite",
+            "React",
+            "Typescript",
+            "Redux-Toolkit",
+            "Tailwind",
+            "Git",
+          ]}
         />
       </div>
     </div>

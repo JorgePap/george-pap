@@ -15,7 +15,7 @@ export const SkillsPage: FC = () => {
             element={TYPOGRAPHY_ELEMENT.H3}
             variant={TYPOGRAPHY_VARIANT.TITLE}
             text="Skills &amp; XP"
-            color="text-transparent"
+            color="text-transparent text-stroke-black dark:text-stroke-white"
           />
         </div>
         <div className="flex flex-col md:flex-row gap-2xl">
