@@ -17,7 +17,7 @@ export const ButtonMoreContent: FC<{
     <div
       className="flex flex-col max-w-[300px] mx-auto gap-md md:absolute md:top-[50px]
                     md:left-[0px] md:translate-x-[-25%] dark:bg-[#2D2A39] p-sm rounded-lg
-                    lg:top-[60px]"
+                    lg:top-[58px] xl:top-[67px]"
     >
       <div className="flex">
         {languageIsOpen && (

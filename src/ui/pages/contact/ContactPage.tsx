@@ -7,7 +7,7 @@ export const ContactPage: FC = () => {
   return (
     <div
       className="h-dvh pt-[80px] md:pt-[110px] lg:pt-[140px] px-[30px] md:px-[115px] 
-    lg:px-[125px] overflow-x-hidden relative"
+    lg:px-[125px] pb-[40px] md:pb-[80px] overflow-x-hidden relative"
     >
       <div className="flex flex-col gap-2xl">
         <div>
@@ -18,7 +18,7 @@ export const ContactPage: FC = () => {
             color="text-transparent"
           />
         </div>
-        <div className="flex flex-col self-center items-center gap-lg">
+        <div className="flex flex-col self-center items-center gap-lg w-full">
           <LinksSection />
           <Typography
             element={TYPOGRAPHY_ELEMENT.P}
@@ -28,6 +28,7 @@ export const ContactPage: FC = () => {
           <FormSection />
         </div>
       </div>
+
       <RoutingButton
         to={PATHS.SKILLS}
         text={"Skills"}
@@ -39,3 +40,5 @@ export const ContactPage: FC = () => {
 };
 
 export default ContactPage;
+
+//Thank you for reaching out to me. I will get back to you soon
