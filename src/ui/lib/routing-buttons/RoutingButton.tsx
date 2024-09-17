@@ -36,9 +36,8 @@ export const RoutingButton: FC<{
         replace
         className={`flex flex-col md:w-[85px] lg:w-[100px] 
               justify-center items-center gap-md px-lg bg-neutral-5 dark:bg-[#6272A4]
-              fixed h-screen top-0 bottom-0 transform
+              fixed h-screen top-0 bottom-0 transform z-50
               ease-in-out duration-200 group-hover:translate-x-[0px]
-              group-hover:z-50
               ${
                 left
                   ? "left-[0px] translate-x-[-100%] rounded-r-lg"

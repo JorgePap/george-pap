@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { Typography } from "../../typography";
 import { ICONS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import { Iconography } from "../../iconography";
@@ -9,10 +9,28 @@ export const ButtonMore: FC<{
   darkMode: boolean;
 }> = ({ toogleTheme, darkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const modalRef = useRef<HTMLDivElement | null>(null);
 
   const toogleButton = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <div className="flex flex-col md:items-start p-md relative">
@@ -45,7 +63,7 @@ export const ButtonMore: FC<{
       </div>
 
       {isOpen && (
-        <div>
+        <div ref={modalRef}>
           <ButtonMoreContent toogleTheme={toogleTheme} darkMode={darkMode} />
         </div>
       )}

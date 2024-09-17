@@ -8,5 +8,7 @@ export enum ICONS {
     AMERICAN_FLAG = "AmericanFlag",
     SUN = "Sun",
     MOON = "Moon",
-    THEME_CHANGE_ICON = "ThemeChangeIcon"
+    THEME_CHANGE_ICON = "ThemeChangeIcon",
+    GITHUB_ICON = "GithubIcon",
+    LINKEDIN_ICON = "LinkedInIcon"
 }

@@ -10,6 +10,8 @@ import AmericanFlag from "./AmericanFlag";
 import Sun from "./Sun";
 import Moon from "./Moon";
 import ThemeChangeIcon from "./ThemeChangeIcon";
+import GitHubIcon from "./GithubIcon";
+import LinkedInIcon from "./LinkedIn";
 
 export interface Props {
   icon: ICONS;
@@ -60,6 +62,10 @@ export const Iconography: FC<Props> = ({
       return <Moon {...attributes} />;
     case ICONS.THEME_CHANGE_ICON:
       return <ThemeChangeIcon {...attributes} />;
+    case ICONS.GITHUB_ICON:
+      return <GitHubIcon {...attributes} />;
+    case ICONS.LINKEDIN_ICON:
+      return <LinkedInIcon {...attributes} />;
     default:
       return <div></div>;
   }

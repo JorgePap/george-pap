@@ -8,7 +8,7 @@ export const HeroSection: FC<{ onClick: () => void }> = ({ onClick }) => {
     <div className="min-h-screen flex flex-col justify-between">
       <div className="pt-[80px] md:pt-[120px] lg:pt-[120px] flex flex-col text-wrap">
         <HoverText text="Hello" />
-        <HoverText text="I'm George" />
+        <HoverText text="I'm &nbsp; George" />
         <HoverText text="Papastergiopoulos" />
       </div>
       {/* Scroll down Starts */}
@@ -18,6 +18,7 @@ export const HeroSection: FC<{ onClick: () => void }> = ({ onClick }) => {
             element={TYPOGRAPHY_ELEMENT.P}
             variant={TYPOGRAPHY_VARIANT.BUTTON_SM}
             text="Scroll down"
+            classes="cursor-pointer"
           />
         </div>
         <Typography

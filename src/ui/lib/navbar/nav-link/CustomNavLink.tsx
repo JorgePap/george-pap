@@ -22,7 +22,9 @@ export const CustomNavLink: FC<{
     <NavLink to={to}>
       {({ isActive }) =>
         isActive ? (
-          <div className={`p-md bg-[#6272A4] rounded-lg ${activeClassName}`}>
+          <div
+            className={`p-md bg-neutral-2 dark:bg-[#6272A4] rounded-lg ${activeClassName}`}
+          >
             <Typography
               element={typographyElement}
               variant={typographyVariant}

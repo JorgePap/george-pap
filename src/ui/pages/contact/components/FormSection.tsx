@@ -93,7 +93,7 @@ export const FormSection: FC = () => {
       />
       <button
         type="submit"
-        className="w-full max-w-[250px] py-md self-center bg-[#6272A4] rounded-lg text-neutral-1"
+        className="w-full max-w-[250px] py-md self-center bg-[#4a66ba] dark:bg-[#6272A4] rounded-lg text-neutral-1"
       >
         Submit
       </button>
