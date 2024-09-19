@@ -4,7 +4,7 @@ import { ICONS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import AllLinks from "./all-links/AllLinks";
 import { ButtonMore } from "./button-more";
 
-export const Navbar: FC<{ toogleTheme?: () => void; darkMode: boolean }> = ({
+export const Navbar: FC<{ toogleTheme: () => void; darkMode: boolean }> = ({
   toogleTheme,
   darkMode,
 }) => {
