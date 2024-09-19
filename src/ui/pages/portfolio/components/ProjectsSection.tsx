@@ -3,7 +3,7 @@ import ProjectsItem from "./project-item/ProjectsItem";
 import { Typography } from "@ui";
 import { TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import KardiasPhoto from "../../../../assets/kardias-project.jpg";
-import WeatherSitePhoto from "../../../../assets/Weather-site-photo.png";
+import WeatherSitePhoto from "../../../../assets/weather-site-photo.png";
 import GameHubProjectPhoto from "../../../../assets/game-hub-project.png";
 import { useTranslation } from "react-i18next";
 import { PORTFOLIO } from "@translations";

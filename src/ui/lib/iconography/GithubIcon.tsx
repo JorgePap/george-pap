@@ -6,10 +6,10 @@ interface SVGRProps {
 const GitHubIcon = ({ ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     id="svg15"
-    clip-rule="evenodd"
-    fill-rule="evenodd"
-    stroke-linejoin="round"
-    stroke-miterlimit="2"
+    clipRule="evenodd"
+    fillRule="evenodd"
+    strokeLinejoin="round"
+    strokeMiterlimit="2"
     viewBox="0 0 64 64"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
@@ -17,7 +17,7 @@ const GitHubIcon = ({ ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
     <path
       id="path4"
       d="m32.0005 4.9998636c-14.901371 0-27.0001352 12.0982884-27.0001352 27.0001484 0 14.901861 12.0987642 27.000149 27.0001352 27.000149s27.000135-12.098288 27.000135-27.000149c0-14.90186-12.098764-27.0001484-27.000135-27.0001484zm0 2.0003388c13.798528 0 25.000286 11.2021186 25.000286 24.9998096 0 13.797692-11.201758 24.99981-25.000286 24.99981s-25.0002856-11.202118-25.0002856-24.99981c0-13.797691 11.2017576-24.9998096 25.0002856-24.9998096z"
-      stroke-width="1.095"
+      strokeWidth="1.095"
     />
     <path
       id="path8"
