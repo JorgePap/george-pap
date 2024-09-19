@@ -3,7 +3,10 @@ import { Typography } from "@ui";
 import { TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import TechItem from "./TechItem";
 
-export const ShowMoreSection: FC<{ techNames: string[] }> = ({ techNames }) => {
+export const ShowMoreSection: FC<{ techNames: string[]; href?: string }> = ({
+  techNames,
+  href,
+}) => {
   return (
     <div className="flex flex-col gap-sm dark:bg-[#2E2B3A]">
       <Typography
@@ -18,14 +21,18 @@ export const ShowMoreSection: FC<{ techNames: string[] }> = ({ techNames }) => {
             <TechItem techName={techName} />
           ))}
         </div>
-        <div className="py-sm px-xl w-max bg-neutral-1 dark:bg-[#444057] rounded-full self-center">
+        <a
+          href={href}
+          target="blank"
+          className="cursor-pointer py-sm px-xl w-max bg-neutral-1 dark:bg-[#444057] rounded-full self-center"
+        >
           <Typography
             element={TYPOGRAPHY_ELEMENT.P}
             variant={TYPOGRAPHY_VARIANT.P1}
             text="See Project"
             classes="text-dark-1 dark:text-neutral-1"
           />
-        </div>
+        </a>
       </div>
     </div>
   );

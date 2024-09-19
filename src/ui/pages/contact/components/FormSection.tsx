@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser";
 import FormItem from "./FormItem";
 import * as yup from "yup";
 import { useFormik } from "formik";
+import { useTranslation } from "react-i18next";
+import { CONTACT } from "@translations";
 
 const validationSchema = yup.object({
   name: yup.string().required("Name is required"),
@@ -15,6 +17,8 @@ const validationSchema = yup.object({
 });
 
 export const FormSection: FC = () => {
+  const { t } = useTranslation();
+
   // Initialize formik with initial values, validation schema and submit handler
   const formik = useFormik({
     initialValues: {
@@ -57,7 +61,7 @@ export const FormSection: FC = () => {
     >
       <FormItem
         type="text"
-        placeholder="Name"
+        placeholder={t("name", { ns: CONTACT })}
         name="name"
         value={formik.values.name}
         onChange={formik.handleChange}
@@ -66,7 +70,7 @@ export const FormSection: FC = () => {
       />
       <FormItem
         type="email"
-        placeholder="Email"
+        placeholder={t("email", { ns: CONTACT })}
         name="email"
         value={formik.values.email}
         onChange={formik.handleChange}
@@ -75,7 +79,7 @@ export const FormSection: FC = () => {
       />
       <FormItem
         type="text"
-        placeholder="Subject"
+        placeholder={t("subject", { ns: CONTACT })}
         name="subject"
         value={formik.values.subject}
         onChange={formik.handleChange}
@@ -85,7 +89,7 @@ export const FormSection: FC = () => {
       <FormItem
         isTextArea={true}
         value={formik.values.message}
-        placeholder="Message"
+        placeholder={t("message", { ns: CONTACT })}
         name="message"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}

@@ -3,11 +3,14 @@ import { Typography } from "../../typography";
 import { ICONS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import { Iconography } from "../../iconography";
 import ButtonMoreContent from "./ButtonMoreContent";
+import { useTranslation } from "react-i18next";
+import { NAVBAR } from "@translations";
 
 export const ButtonMore: FC<{
-  toogleTheme?: () => void;
+  toogleTheme: () => void;
   darkMode: boolean;
 }> = ({ toogleTheme, darkMode }) => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement | null>(null);
 
@@ -41,7 +44,7 @@ export const ButtonMore: FC<{
         <Typography
           element={TYPOGRAPHY_ELEMENT.H3}
           variant={TYPOGRAPHY_VARIANT.H5}
-          text="More"
+          text={t("more", { ns: NAVBAR })}
           color="text-[light-1] dark:text-[#C2C3C0]"
         />
         {!isOpen && (

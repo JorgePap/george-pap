@@ -11,6 +11,7 @@ export default defineConfig({
       "@domain": path.resolve(__dirname, "src/domain/index.ts"),
       "@router": path.resolve(__dirname, "src/router/index.ts"),
       "@ui": path.resolve(__dirname, "src/ui/index.ts"),
+      "@translations": path.resolve(__dirname, "src/translations/index.ts"),
     },
   },
 });

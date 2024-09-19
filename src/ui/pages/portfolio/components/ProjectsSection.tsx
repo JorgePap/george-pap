@@ -3,8 +3,14 @@ import ProjectsItem from "./project-item/ProjectsItem";
 import { Typography } from "@ui";
 import { TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import KardiasPhoto from "../../../../assets/kardias-project.jpg";
+import WeatherSitePhoto from "../../../../assets/Weather-site-photo.png";
+import GameHubProjectPhoto from "../../../../assets/game-hub-project.png";
+import { useTranslation } from "react-i18next";
+import { PORTFOLIO } from "@translations";
 
 export const ProjectsSection: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col gap-xl">
       <Typography
@@ -18,10 +24,8 @@ export const ProjectsSection: FC = () => {
                     gap-xl pb-[20px]"
       >
         <ProjectsItem
-          title={"Kardias"}
-          text={
-            "Kardias is a streamlined system for efficient house rental management"
-          }
+          title={t("kardias", { ns: PORTFOLIO })}
+          text={t("kardiasText", { ns: PORTFOLIO })}
           techNames={[
             "Vite",
             "React",
@@ -31,12 +35,12 @@ export const ProjectsSection: FC = () => {
             "Node.js",
             "Git",
           ]}
-          classes="bg-center"
+          classes="bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${KardiasPhoto})` }}
         />
         <ProjectsItem
-          title={"Stratakis Lab"}
-          text={"Stratakis Lab is a project"}
+          title={t("stratakisLab", { ns: PORTFOLIO })}
+          text={t("stratakisLabText", { ns: PORTFOLIO })}
           techNames={[
             "Vite",
             "React",
@@ -47,8 +51,9 @@ export const ProjectsSection: FC = () => {
           ]}
         />
         <ProjectsItem
-          title={"Whether"}
-          text={"Weather is a personal project that provides weather forecasts"}
+          title={t("weather", { ns: PORTFOLIO })}
+          text={t("weatherText", { ns: PORTFOLIO })}
+          href="https://weather-site-peach.vercel.app/"
           techNames={[
             "Vite",
             "React",
@@ -57,6 +62,16 @@ export const ProjectsSection: FC = () => {
             "Tailwind",
             "Git",
           ]}
+          classes="bg-cover bg-no-repeat"
+          style={{ backgroundImage: `url(${WeatherSitePhoto})` }}
+        />
+        <ProjectsItem
+          title={t("gameHub", { ns: PORTFOLIO })}
+          text={t("gameHubText", { ns: PORTFOLIO })}
+          href="https://game-hub-alpha-indol.vercel.app/"
+          techNames={["Vite", "React", "Typescript", "Tailwind", "Git"]}
+          classes="bg-cover bg-no-repeat"
+          style={{ backgroundImage: `url(${GameHubProjectPhoto})` }}
         />
       </div>
     </div>

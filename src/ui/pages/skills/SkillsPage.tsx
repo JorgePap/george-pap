@@ -2,8 +2,12 @@ import { ICONS, PATHS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import { RoutingButton, Typography } from "@ui";
 import { FC } from "react";
 import { SkillsAndXpSection } from "./components";
+import { useTranslation } from "react-i18next";
+import { SKILLS } from "@translations";
 
 export const SkillsPage: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div
       className="h-dvh pt-[80px] md:pt-[110px] lg:pt-[140px] px-[30px] md:px-[115px] 
@@ -24,18 +28,12 @@ export const SkillsPage: FC = () => {
             <Typography
               element={TYPOGRAPHY_ELEMENT.P}
               variant={TYPOGRAPHY_VARIANT.P1}
-              text="Since I started my journey as a Front-end student
-              almost 3 years ago, I have learned a lot about and done
-              some good personal projects and now I am looking for an
-              opportunity to use what I have learned and learn more with
-              a good team."
+              text={t("textOne", { ns: SKILLS })}
             />
             <Typography
               element={TYPOGRAPHY_ELEMENT.P}
               variant={TYPOGRAPHY_VARIANT.P1}
-              text="All my projects are available on my Github profile
-                and if you think I can be part of your team and we can
-                team up you can contact me on my likedin profile."
+              text={t("textTwo", { ns: SKILLS })}
             />
           </div>
         </div>

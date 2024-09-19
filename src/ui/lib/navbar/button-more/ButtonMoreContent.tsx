@@ -1,15 +1,38 @@
 import { FC, useState } from "react";
 import { Typography } from "../../typography";
-import { ICONS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
+import {
+  ICONS,
+  LANGUAGES,
+  TYPOGRAPHY_ELEMENT,
+  TYPOGRAPHY_VARIANT,
+} from "@domain";
 import { Iconography } from "../../iconography";
+import i18next from "i18next";
+import ButtonOptions from "./ButtonOptions";
+import ChangeLanguageContent from "./ChangeLanguageContent";
+import { useTranslation } from "react-i18next";
+import { NAVBAR } from "@translations";
 
 export const ButtonMoreContent: FC<{
-  toogleTheme?: () => void;
+  toogleTheme: () => void;
   darkMode: boolean;
 }> = ({ toogleTheme, darkMode }) => {
+  const { t } = useTranslation();
   const [languageIsOpen, setLanguageIsOpen] = useState(false);
 
-  const toogleLanguage = () => {
+  const changeLanguageToGreek = () => {
+    if (i18next.language !== LANGUAGES.GR) {
+      i18next.changeLanguage(LANGUAGES.GR);
+    }
+  };
+
+  const changeLanguageToEnglish = () => {
+    if (i18next.language !== LANGUAGES.EN) {
+      i18next.changeLanguage(LANGUAGES.EN);
+    }
+  };
+
+  const toogleLanguageContent = () => {
     setLanguageIsOpen(!languageIsOpen);
   };
 
@@ -19,70 +42,39 @@ export const ButtonMoreContent: FC<{
                     md:left-[0px] md:translate-x-[-25%] bg-neutral-2 border border-neutral-4 dark:border-none dark:bg-[#2D2A39] p-sm rounded-lg
                     lg:top-[58px] xl:top-[67px]"
     >
-      <div className="flex">
-        {languageIsOpen && (
+      {languageIsOpen ? (
+        <div onClick={toogleLanguageContent} className="flex items-center">
           <Iconography
             icon={ICONS.ARROW_LEFT}
-            width="18"
-            height="18"
-            classes="w-[30px] h-[30px] stroke-dark-1 dark:stroke-neutral-1"
+            classes="w-[24px] h-[24px] stroke-dark-1 dark:stroke-neutral-1"
           />
-        )}
+          <Typography
+            element={TYPOGRAPHY_ELEMENT.P}
+            variant={TYPOGRAPHY_VARIANT.P1}
+            text={t("back", { ns: NAVBAR })}
+            classes="text-dark-1 dark:text-light-2"
+          />
+        </div>
+      ) : (
         <Typography
           element={TYPOGRAPHY_ELEMENT.P}
           variant={TYPOGRAPHY_VARIANT.P1}
-          text="Options"
+          text={t("options", { ns: NAVBAR })}
           classes="text-dark-1 dark:text-light-2"
         />
-      </div>
-      <div className="flex w-full flex-col gap-sm">
-        <div
-          onClick={toogleLanguage}
-          className="flex w-full justify-between md:min-w-[200px] items-center hover:bg-neutral-3 dark:bg-[#454158] rounded-lg p-xs"
-        >
-          <Iconography
-            icon={ICONS.AMERICAN_FLAG}
-            classes="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[28px] lg:h-[28px]"
-          />
-          <Typography
-            element={TYPOGRAPHY_ELEMENT.P}
-            variant={TYPOGRAPHY_VARIANT.P1}
-            text="Language"
-          />
-          <Iconography
-            icon={ICONS.ARROW_RIGHT}
-            width="18"
-            height="18"
-            classes="w-[30px] h-[30px] stroke-dark-1 dark:stroke-neutral-1"
-          />
-        </div>
-        <div
-          onClick={toogleTheme}
-          className="flex w-full justify-between md:min-w-[200px] items-center hover:bg-neutral-3 bg-neutral-2 dark:bg-[#454158] rounded-lg p-xs"
-        >
-          {darkMode ? (
-            <Iconography
-              icon={ICONS.SUN}
-              classes="fill-[#fcdb33] w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[28px] lg:h-[28px]"
-            />
-          ) : (
-            <Iconography
-              icon={ICONS.MOON}
-              classes="fill-[#fcdb33] w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[28px] lg:h-[28px]"
-            />
-          )}
-
-          <Typography
-            element={TYPOGRAPHY_ELEMENT.P}
-            variant={TYPOGRAPHY_VARIANT.P1}
-            text="Theme"
-          />
-          <Iconography
-            icon={ICONS.THEME_CHANGE_ICON}
-            classes="fill-dark-1 dark:fill-neutral-1 w-[30px] h-[30px]"
-          />
-        </div>
-      </div>
+      )}
+      {!languageIsOpen ? (
+        <ButtonOptions
+          toogleLanguageContent={toogleLanguageContent}
+          toogleTheme={toogleTheme}
+          darkMode={darkMode}
+        />
+      ) : (
+        <ChangeLanguageContent
+          changeLanguageToEnglish={changeLanguageToEnglish}
+          changeLanguageToGreek={changeLanguageToGreek}
+        />
+      )}
     </div>
   );
 };

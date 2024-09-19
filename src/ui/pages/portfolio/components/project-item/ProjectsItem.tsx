@@ -9,7 +9,8 @@ export const ProjectsItem: FC<{
   techNames: string[];
   classes?: string;
   style?: CSSProperties | undefined;
-}> = ({ title, text, techNames, classes, style }) => {
+  href?: string;
+}> = ({ title, text, techNames, classes, style, href }) => {
   const [showMore, setShowMore] = useState(false);
 
   const toggleShowMore = () => {
@@ -18,8 +19,9 @@ export const ProjectsItem: FC<{
 
   return (
     <div
-      className={`min-w-[290px] min-h-[290px] lg:min-w-[400px] lg:min-h-[350px] border border-dark-1 dark:border-neutral-1
-                     rounded-lg relative ${classes}`}
+      className={`border border-dark-1 dark:border-neutral-1 rounded-lg relative  
+                  ${classes} min-w-[290px] min-h-[290px] lg:min-w-[400px] lg:min-h-[350px]
+                  lg:min-w-[450px] lg:min-h-[400px]`}
       style={style}
     >
       {/* inner box */}
@@ -52,7 +54,7 @@ export const ProjectsItem: FC<{
         />
         {showMore && (
           <div>
-            <ShowMoreSection techNames={techNames} />
+            <ShowMoreSection href={href} techNames={techNames} />
           </div>
         )}
       </div>

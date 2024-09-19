@@ -12,7 +12,7 @@ export const HoverText: FC<{ text: string }> = ({ text }) => {
           variant={TYPOGRAPHY_VARIANT.H2}
           classes=" transition-transform duration-200 hover:-translate-y-2 lg:hover:-translate-y-6"
         >
-          {char}
+          {char === " " ? "\u00A0" : char}
         </Typography>
       ))}
     </div>
