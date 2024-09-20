@@ -5,6 +5,7 @@ import { TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import KardiasPhoto from "../../../../assets/kardias-project.jpg";
 import WeatherSitePhoto from "../../../../assets/weather-site-photo.png";
 import GameHubProjectPhoto from "../../../../assets/game-hub-project.png";
+import StratakisLabPhoto from "../../../../assets/stratakis-lab-photo.png";
 import { useTranslation } from "react-i18next";
 import { PORTFOLIO } from "@translations";
 
@@ -26,6 +27,7 @@ export const ProjectsSection: FC = () => {
         <ProjectsItem
           title={t("kardias", { ns: PORTFOLIO })}
           text={t("kardiasText", { ns: PORTFOLIO })}
+          href="https://kardias-website.onrender.com/"
           techNames={[
             "Vite",
             "React",
@@ -41,6 +43,7 @@ export const ProjectsSection: FC = () => {
         <ProjectsItem
           title={t("stratakisLab", { ns: PORTFOLIO })}
           text={t("stratakisLabText", { ns: PORTFOLIO })}
+          href="https://stratakis-lab.onrender.com/"
           techNames={[
             "Vite",
             "React",
@@ -49,6 +52,8 @@ export const ProjectsSection: FC = () => {
             "Tailwind",
             "Git",
           ]}
+          classes="bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${StratakisLabPhoto})` }}
         />
         <ProjectsItem
           title={t("weather", { ns: PORTFOLIO })}

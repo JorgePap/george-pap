@@ -27,9 +27,9 @@ export const enTranslations = {
   },
   [PORTFOLIO]: {
     kardias: "Kardias",
-    kardiasText: "Kardias is a streamlined system for efficient house rental management",
+    kardiasText: "Kardias is a streamlined system for efficient house rental management *(takes some seconds on first render)",
     stratakisLab: "Stratakis Lab",
-    stratakisLabText: "Stratakis Lab is a project",
+    stratakisLabText: "Stratakis Lab is a website for the Ultrafast Laser Micro and Nano Processing Laboratory at the University of Crete, highlighting their research and innovations. *(takes some seconds on first render)",
     weather: "Weather",
     weatherText: "Weather is a personal project i  built to practice API integration and state management using Redux Toolkit.",
     gameHub: "Game Hub",
