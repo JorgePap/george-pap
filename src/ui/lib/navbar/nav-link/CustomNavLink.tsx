@@ -10,6 +10,7 @@ export const CustomNavLink: FC<{
   title: string;
   typographyElement: TYPOGRAPHY_ELEMENT;
   typographyVariant: TYPOGRAPHY_VARIANT;
+  onClick?: () => void;
 }> = ({
   className,
   activeClassName,
@@ -17,9 +18,10 @@ export const CustomNavLink: FC<{
   title,
   typographyElement,
   typographyVariant,
+  onClick,
 }) => {
   return (
-    <NavLink to={to}>
+    <NavLink onClick={onClick} to={to}>
       {({ isActive }) =>
         isActive ? (
           <div

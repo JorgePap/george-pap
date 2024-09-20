@@ -3,6 +3,7 @@ import { Drawer, Iconography } from "@ui";
 import { ICONS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import AllLinks from "./all-links/AllLinks";
 import { ButtonMore } from "./button-more";
+import AllLinksMobile from "./all-links/AllLinksMobile";
 
 export const Navbar: FC<{ toogleTheme: () => void; darkMode: boolean }> = ({
   toogleTheme,
@@ -59,8 +60,9 @@ export const Navbar: FC<{ toogleTheme: () => void; darkMode: boolean }> = ({
       <div className="relative bg-neutral-1 dark:bg-dark-1">
         <Drawer isDrawerOpen={mobileNavIsOpen}>
           <div className="flex flex-col pt-[50px]">
-            <AllLinks
+            <AllLinksMobile
               className="items-center"
+              toggleMobileNav={toggleMobileNavBar}
               typographyElement={TYPOGRAPHY_ELEMENT.H3}
               typographyVariant={TYPOGRAPHY_VARIANT.H2}
             />
