@@ -11,7 +11,7 @@ const WantToSection: FC = () => {
       <Image
         imageSrc={ThreeJsLogo}
         alt="NextJS-Logo"
-        className="bg-neutral-1 rounded-md"
+        className="bg-white dark:bg-neutral-1 rounded-md"
       />
     </SkillsAndXpItem>
   );

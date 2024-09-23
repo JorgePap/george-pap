@@ -26,7 +26,7 @@ export const typographyVariations = ({
     [tv.P3_MEDIUM]: "font-paragraph font-regular text-xs",
     [tv.P3_BOLD]: "font-paragraph font-bold text-xs",
     [tv.NAV]: "font-paragraph font-regular text-2xl lg:text-base",
-    [tv.LABEL]: "font-heading uppercase text-md",
+    [tv.LABEL]: "font-heading uppercase text-lg",
     [tv.INPUT]: "font-paragraph font-regular text-base",
     [tv.BUTTON]: "font-paragraph font-bold text-md text-black",
     [tv.BUTTON_SM]: "font-paragraph font-bold text-base text-black",

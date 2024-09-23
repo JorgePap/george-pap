@@ -66,10 +66,10 @@ export const FormItem: FC<{
             onChange={handleChange}
             onBlur={handleBlur}
             onFocus={handleFocus}
-            className="w-full placeholder-neutral-1 bg-neutral-2 text-black dark:bg-[#454158] pl-[20px] md:pl-[25px] lg:pl-[30px] pr-[16px] py-[16px] rounded-md"
+            className="w-full placeholder-neutral-1 bg-neutral-2 text-black dark:bg-[#454158] pl-[20px] md:pl-[25px] lg:pl-[30px] pr-[16px] py-[16px] rounded-md text-black dark:text-neutral-1"
           />
           <span
-            className={`text-black dark:text-neutral-1 absolute left-0 px-lg py-md transition duration-200 input-text
+            className={`absolute left-0 px-lg py-md transition duration-200 input-text text-black dark:text-neutral-1 opacity-85
                         ${
                           (hasFocus || isDirty) &&
                           "transform -translate-y-[20px] -translate-y-[22.5px] md:-translate-y-[25px] lg:-translate-y-[28px] xl:-translate-y-[29px] -translate-x-[5px]"
@@ -88,11 +88,10 @@ export const FormItem: FC<{
             onChange={handleChange}
             onBlur={handleBlur}
             onFocus={handleFocus}
-            className={`placeholder-neutral-1 bg-neutral-2 dark:bg-[#454158] px-md py-sm rounded-md
-                   `}
+            className={`placeholder-neutral-1 bg-neutral-2 dark:bg-[#454158] px-md py-sm rounded-md text-black dark:text-neutral-1`}
           />
           <span
-            className={`text-black dark:text-neutral-1 absolute left-0 p-md transition duration-200 input-text
+            className={`text-black dark:text-neutral-1 opacity-85 absolute left-0 p-md transition duration-200 input-text
                         ${
                           (hasFocus || isDirty) &&
                           "transform -translate-y-[29px] -translate-x-[6px]"
