@@ -11,7 +11,7 @@ import { Image } from "@ui";
 
 const XpSection: FC = () => {
   return (
-    <SkillsAndXpItem title="Xp">
+    <SkillsAndXpItem title="Experience">
       <Image imageSrc={JsLogo} alt="JS-Logo" />
       <Image imageSrc={TSLogo} alt="TS-Logo" />
       <Image imageSrc={REACTLogo} alt="TS-Logo" />

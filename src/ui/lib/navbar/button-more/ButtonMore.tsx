@@ -36,10 +36,10 @@ export const ButtonMore: FC<{
   }, [isOpen]);
 
   return (
-    <div className="flex flex-col md:items-start p-md relative">
+    <div ref={modalRef} className="flex flex-col md:items-start p-md relative">
       <div
         onClick={toogleButton}
-        className="flex items-center justify-center gap-xs"
+        className="flex items-center justify-center gap-xs cursor-pointer"
       >
         <Typography
           element={TYPOGRAPHY_ELEMENT.H3}
@@ -66,7 +66,7 @@ export const ButtonMore: FC<{
       </div>
 
       {isOpen && (
-        <div ref={modalRef}>
+        <div>
           <ButtonMoreContent toogleTheme={toogleTheme} darkMode={darkMode} />
         </div>
       )}

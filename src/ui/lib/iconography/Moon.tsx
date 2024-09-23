@@ -37,35 +37,33 @@ const Moon = ({ ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
         fill="rgb(39,83,107)"
         fillRule="nonzero"
         opacity={"1"}
-        transform="  matrix(1 0 0 1 0 0) "
+        transform="matrix(1 0 0 1 0 0)"
       />
       <path
         d="M 38.81 51.19 c -9.155 -9.155 -10.308 -23.282 -3.46 -33.69 c -3.454 1.393 -6.692 3.488 -9.492 6.288 c -11.144 11.144 -11.144 29.211 0 40.354 s 29.211 11.144 40.354 0 c 2.8 -2.8 4.895 -6.037 6.288 -9.492 C 62.092 61.499 47.965 60.346 38.81 51.19 z"
         stroke="none"
         strokeWidth={"1"}
         strokeDasharray={"none"}
-        strokeLinecap="butt"
+        strokeLinecap="round"
         strokeLinejoin="miter"
         strokeMiterlimit={"10"}
         fill="rgb(252,213,126)"
         fillRule="nonzero"
         opacity={"1"}
-        transform=" matrix(1 0 0 1 0 0) "
-        stroke-linecap="round"
+        transform="matrix(1 0 0 1 0 0)"
       />
       <path
         d="M 55.218 41.106 c -1.083 -3.251 -3.654 -5.822 -6.905 -6.906 c -0.542 -0.181 -0.542 -0.934 0 -1.115 c 3.251 -1.083 5.822 -3.654 6.905 -6.905 c 0.181 -0.542 0.934 -0.542 1.115 0 c 1.083 3.251 3.654 5.822 6.906 6.905 c 0.542 0.18 0.542 0.934 0 1.115 c -3.251 1.083 -5.822 3.655 -6.906 6.906 C 56.153 41.648 55.399 41.648 55.218 41.106 z"
         stroke="none"
         strokeWidth={"1"}
         strokeDasharray={"none"}
-        strokeLinecap="butt"
+        strokeLinecap="round"
         strokeLinejoin="miter"
         strokeMiterlimit={"10"}
         fill="rgb(234,239,244)"
         fillRule="nonzero"
         opacity={"1"}
-        transform=" matrix(1 0 0 1 0 0) "
-        stroke-linecap="round"
+        transform="matrix(1 0 0 1 0 0)"
       />
       <circle
         cx="78.165"
@@ -80,7 +78,7 @@ const Moon = ({ ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
         fill="rgb(234,239,244)"
         fillRule="nonzero"
         opacity={"1"}
-        transform="  matrix(1 0 0 1 0 0) "
+        transform="matrix(1 0 0 1 0 0)"
       />
       <circle
         cx="39.665"
@@ -95,7 +93,7 @@ const Moon = ({ ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
         fill="rgb(234,239,244)"
         fillRule="nonzero"
         opacity={"1"}
-        transform="  matrix(1 0 0 1 0 0) "
+        transform="matrix(1 0 0 1 0 0)"
       />
       <circle
         cx="45.005"
@@ -110,7 +108,7 @@ const Moon = ({ ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
         fill="rgb(234,239,244)"
         fillRule="nonzero"
         opacity={"1"}
-        transform="  matrix(1 0 0 1 0 0) "
+        transform="matrix(1 0 0 1 0 0)"
       />
       <circle
         cx="56.945"
@@ -125,7 +123,7 @@ const Moon = ({ ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
         fill="rgb(234,239,244)"
         fillRule="nonzero"
         opacity={"1"}
-        transform="  matrix(1 0 0 1 0 0) "
+        transform="matrix(1 0 0 1 0 0)"
       />
       <circle
         cx="9.094999999999999"
@@ -140,7 +138,7 @@ const Moon = ({ ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
         fill="rgb(234,239,244)"
         fillRule="nonzero"
         opacity={"1"}
-        transform="  matrix(1 0 0 1 0 0) "
+        transform="matrix(1 0 0 1 0 0)"
       />
       <circle
         cx="70.235"
@@ -155,7 +153,7 @@ const Moon = ({ ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
         fill="rgb(234,239,244)"
         fillRule="nonzero"
         opacity={"1"}
-        transform="  matrix(1 0 0 1 0 0) "
+        transform="matrix(1 0 0 1 0 0)"
       />
       <circle
         cx="69.075"
@@ -170,7 +168,7 @@ const Moon = ({ ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
         fill="rgb(234,239,244)"
         fillRule="nonzero"
         opacity={"1"}
-        transform="  matrix(1 0 0 1 0 0) "
+        transform="matrix(1 0 0 1 0 0)"
       />
       <circle
         cx="16.335"
@@ -185,7 +183,7 @@ const Moon = ({ ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
         fill="rgb(234,239,244)"
         fillRule="nonzero"
         opacity={"1"}
-        transform="  matrix(1 0 0 1 0 0) "
+        transform="matrix(1 0 0 1 0 0)"
       />
     </g>
   </svg>

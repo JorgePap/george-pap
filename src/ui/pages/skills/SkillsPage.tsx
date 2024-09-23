@@ -18,7 +18,7 @@ export const SkillsPage: FC = () => {
           <Typography
             element={TYPOGRAPHY_ELEMENT.H3}
             variant={TYPOGRAPHY_VARIANT.TITLE}
-            text="Skills &amp; XP"
+            text="Skills &amp; Experience"
             color="text-transparent text-stroke-black dark:text-stroke-white"
           />
         </div>

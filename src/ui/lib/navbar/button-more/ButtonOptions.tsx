@@ -1,8 +1,14 @@
 import { FC } from "react";
-import { ICONS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
+import {
+  ICONS,
+  LANGUAGES,
+  TYPOGRAPHY_ELEMENT,
+  TYPOGRAPHY_VARIANT,
+} from "@domain";
 import { Iconography, Typography } from "@ui";
 import { useTranslation } from "react-i18next";
 import { NAVBAR } from "@translations";
+import i18next from "i18next";
 
 export const ButtonOptions: FC<{
   toogleLanguageContent: () => void;
@@ -15,12 +21,19 @@ export const ButtonOptions: FC<{
     <div className="flex w-full flex-col gap-sm">
       <div
         onClick={toogleLanguageContent}
-        className="flex w-full justify-between md:min-w-[200px] items-center hover:bg-neutral-3 dark:bg-[#454158] rounded-lg p-xs"
+        className="flex w-full justify-between md:min-w-[200px] items-center hover:bg-neutral-3 dark:bg-[#454158] rounded-lg p-xs cursor-pointer"
       >
-        <Iconography
-          icon={ICONS.AMERICAN_FLAG}
-          classes="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[28px] lg:h-[28px]"
-        />
+        {i18next.language === LANGUAGES.EN ? (
+          <Iconography
+            icon={ICONS.AMERICAN_FLAG}
+            classes="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[28px] lg:h-[28px]"
+          />
+        ) : (
+          <Iconography
+            icon={ICONS.GREEK_FLAG}
+            classes="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[28px] lg:h-[28px]"
+          />
+        )}
         <Typography
           element={TYPOGRAPHY_ELEMENT.P}
           variant={TYPOGRAPHY_VARIANT.P1}
@@ -35,7 +48,7 @@ export const ButtonOptions: FC<{
       </div>
       <div
         onClick={toogleTheme}
-        className="flex w-full justify-between md:min-w-[200px] items-center hover:bg-neutral-3 bg-neutral-2 dark:bg-[#454158] rounded-lg p-xs"
+        className="flex w-full justify-between md:min-w-[200px] items-center hover:bg-neutral-3 bg-neutral-2 dark:bg-[#454158] rounded-lg p-xs cursor-pointer"
       >
         {darkMode ? (
           <Iconography

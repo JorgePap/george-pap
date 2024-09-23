@@ -19,15 +19,15 @@ export const ProjectsItem: FC<{
 
   return (
     <div
-      className={`border border-dark-1 dark:border-neutral-1 rounded-lg relative  
+      className={`border border-dark-1 dark:border-none rounded-lg relative  
                   ${classes} min-w-[290px] min-h-[290px] lg:min-w-[400px] lg:min-h-[350px]
                   lg:min-w-[450px] lg:min-h-[400px]`}
       style={style}
     >
       {/* inner box */}
       <div
-        className="absolute w-full bottom-[0px] rounded-lg h-max bg-neutral-1 
-                   py-sm px-md flex flex-col gap-sm dark:bg-[#2E2B3A]"
+        className="absolute flex flex-col gap-sm w-full rounded-lg h-max bg-neutral-2 dark:bg-[#2E2B3A]
+                   bottom-[0px] py-sm px-md"
       >
         <div className="flex w-full justify-between">
           <Typography

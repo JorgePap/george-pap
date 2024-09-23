@@ -43,7 +43,10 @@ export const ButtonMoreContent: FC<{
                     lg:top-[58px] xl:top-[67px]"
     >
       {languageIsOpen ? (
-        <div onClick={toogleLanguageContent} className="flex items-center">
+        <div
+          onClick={toogleLanguageContent}
+          className="flex items-center cursor-pointer"
+        >
           <Iconography
             icon={ICONS.ARROW_LEFT}
             classes="w-[24px] h-[24px] stroke-dark-1 dark:stroke-neutral-1"

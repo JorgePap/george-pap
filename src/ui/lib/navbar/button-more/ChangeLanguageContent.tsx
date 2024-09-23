@@ -15,7 +15,7 @@ export const ChangeLanguageContent: FC<{
       <div
         onClick={changeLanguageToEnglish}
         className="flex w-full justify-between items-center bg-neutral-2 dark:bg-[#454158]
-                        hover:bg-neutral-3 rounded-lg p-xs md:min-w-[200px] "
+                        hover:bg-neutral-3 rounded-lg p-xs md:min-w-[200px] cursor-pointer"
       >
         <Iconography
           icon={ICONS.AMERICAN_FLAG}
@@ -31,10 +31,10 @@ export const ChangeLanguageContent: FC<{
       <div
         onClick={changeLanguageToGreek}
         className="flex w-full justify-between items-center bg-neutral-2 dark:bg-[#454158]
-                        hover:bg-neutral-3 rounded-lg p-xs md:min-w-[200px] "
+                        hover:bg-neutral-3 rounded-lg p-xs md:min-w-[200px] cursor-pointer"
       >
         <Iconography
-          icon={ICONS.AMERICAN_FLAG}
+          icon={ICONS.GREEK_FLAG}
           classes="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[28px] lg:h-[28px]"
         />
         <Typography

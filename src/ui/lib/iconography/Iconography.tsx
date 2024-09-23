@@ -12,6 +12,8 @@ import Moon from "./Moon";
 import ThemeChangeIcon from "./ThemeChangeIcon";
 import GitHubIcon from "./GithubIcon";
 import LinkedInIcon from "./LinkedIn";
+import GreekFlag from "./GreekFlag";
+import ThreeJsIcon from "./ThreeJsIcon";
 
 export interface Props {
   icon: ICONS;
@@ -66,6 +68,10 @@ export const Iconography: FC<Props> = ({
       return <GitHubIcon {...attributes} />;
     case ICONS.LINKEDIN_ICON:
       return <LinkedInIcon {...attributes} />;
+    case ICONS.GREEK_FLAG:
+      return <GreekFlag {...attributes} />;
+    case ICONS.THREE_JS_ICON:
+      return <ThreeJsIcon {...attributes} />;
     default:
       return <div></div>;
   }
