@@ -13,36 +13,36 @@ export const Routing: FC = () => {
           key={"home"}
           path={PATHS.HOME}
           element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <HomePage />
-            </Suspense>
+            // <Suspense fallback={<div>Loading...</div>}>
+            <HomePage />
+            // </Suspense>
           }
         />
         <Route
           key={"portfolio"}
           path={PATHS.PORTFOLIO}
           element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <PortfolioPage />
-            </Suspense>
+            // <Suspense fallback={<div>Loading...</div>}>
+            <PortfolioPage />
+            // </Suspense>
           }
         />
         <Route
           key={"skills"}
           path={PATHS.SKILLS}
           element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <SkillsPage />
-            </Suspense>
+            // <Suspense fallback={<div>Loading...</div>}>
+            <SkillsPage />
+            // </Suspense>
           }
         />
         <Route
           key={"contact"}
           path={PATHS.CONTACT}
           element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <ContactPage />
-            </Suspense>
+            // <Suspense fallback={<div>Loading...</div>}>
+            <ContactPage />
+            // </Suspense>
           }
         />
       </Routes>
