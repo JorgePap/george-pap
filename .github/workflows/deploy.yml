@@ -19,11 +19,12 @@ jobs:
         with:
           node-version: 20
 
-      - name: Set environment variables for deployment
+      - name: Build project with environment variables
         run: |
-          echo "VITE_PUBLIC_KEY=${{ secrets.VITE_PUBLIC_KEY }}" >> $GITHUB_ENV
-          echo "VITE_SERVICE_ID=${{ secrets.VITE_SERVICE_ID }}" >> $GITHUB_ENV
-          echo "VITE_TEMPLATE_ID=${{ secrets.VITE_TEMPLATE_ID }}" >> $GITHUB_ENV
+          VITE_PUBLIC_KEY=${{ secrets.VITE_PUBLIC_KEY }} \
+          VITE_SERVICE_ID=${{ secrets.VITE_SERVICE_ID }} \
+          VITE_TEMPLATE_ID=${{ secrets.VITE_TEMPLATE_ID }} \
+          npm run build
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
