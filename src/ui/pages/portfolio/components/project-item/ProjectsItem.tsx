@@ -20,7 +20,7 @@ export const ProjectsItem: FC<{
   return (
     <div
       className={`border border-dark-1 dark:border-none rounded-lg relative  
-                  ${classes} min-w-[290px] min-h-[290px] lg:min-w-[400px] lg:min-h-[350px]
+                  ${classes} min-w-[290px] min-h-[290px] md:min-w-[400px] md:min-h-[350px]
                   lg:min-w-[450px] lg:min-h-[400px]`}
       style={style}
     >

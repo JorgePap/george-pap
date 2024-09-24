@@ -5,7 +5,8 @@ import { Navbar } from "@ui";
 import { useState } from "react";
 
 function App() {
-  const basename = "/george-pap/";
+  const basename =
+    import.meta.env.BASE_URL === "development" ? "/" : "/george-pap/";
   const language = localStorage.getItem("language") ?? "";
   document.getElementsByTagName("html")[0].setAttribute("lang", language);
   const [darkMode, setDarkMode] = useState(true);
