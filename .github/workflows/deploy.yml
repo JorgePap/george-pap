@@ -19,6 +19,11 @@ jobs:
         with:
           node-version: 20
 
+      # Install dependencies before building the project
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+
+      # Build the project while passing the environment variables
       - name: Build project with environment variables
         run: |
           VITE_PUBLIC_KEY=${{ secrets.VITE_PUBLIC_KEY }} \
@@ -26,12 +31,7 @@ jobs:
           VITE_TEMPLATE_ID=${{ secrets.VITE_TEMPLATE_ID }} \
           npm run build
 
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-
-      - name: Build project
-        run: npm run build
-
+      # Upload production-ready build files to artifacts
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
         with:
@@ -45,12 +45,14 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
+      # Download the artifact from the build job
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: production-files
           path: ./dist
 
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
