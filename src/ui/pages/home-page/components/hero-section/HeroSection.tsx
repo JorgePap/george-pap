@@ -10,7 +10,7 @@ export const HeroSection: FC<{ onClick: () => void }> = ({ onClick }) => {
 
   return (
     <div className="min-h-screen flex flex-col justify-between">
-      <div className="pt-[80px] md:pt-[120px] lg:pt-[120px] flex flex-col text-wrap">
+      <div className="pt-[80px] md:pt-[120px] lg:pt-[120px] xl:pt-[160px] flex flex-col text-wrap">
         <HoverText text={t("hello", { ns: HOME })} />
         <HoverText text={t("iAmGeorge", { ns: HOME })} />
         <HoverText text={t("lastName", { ns: HOME })} />

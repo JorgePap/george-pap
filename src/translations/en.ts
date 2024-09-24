@@ -20,9 +20,9 @@ export const enTranslations = {
     iAmGeorge: "I'm George",
     lastName: "Papastergiopoulos",
     me: "About me",
-    meTextOne: "Hi, I'm George, and here's a bit about me. I'm 27 years old and a Front-End Developer based in Xanthi, a small city in Greece, with a strong passion for web development and a love for creating interactive and responsive web experiences. I'm always excited to explore new technologies and creative solutions.",
-    meTextTwo: "As a self-taught developer, I constantly strive to stay updated on the latest trends and best practices in front-end development. I believe that continuous learning is key to growth, so I make it a point to expand my knowledge and refine my skills regularly. My goal is to deliver high-quality work that balances both creativity and functionality, ensuring that users have a seamless and engaging experience.",
-    meTextThree: "I have a particular interest in React and enjoy leveraging its capabilities to build dynamic, user-friendly interfaces. My focus also includes responsive design and performance optimization, as I believe these elements are crucial for a great user experience. I'm eager to dive into ambitious projects where I can contribute, grow, and make a meaningful impact.",
+    meTextOne: "Hi, I'm George, and here's a bit about me. I'm 27 years old and a Front-End Developer based in Greece, with a strong passion for web development and a love for creating interactive and responsive web experiences. I'm always excited to explore new technologies and creative solutions.",
+    meTextTwo: "I constantly strive to stay updated on the latest trends and best practices in front-end development. I believe that continuous learning is key to growth, so I make it a point to expand my knowledge and refine my skills regularly. My goal is to deliver high-quality work that balances creativity and functionality, ensuring that users have a seamless and engaging experience.",
+    meTextThree: "I have a particular interest in React and enjoy leveraging its capabilities to build dynamic, user-friendly interfaces. I'm eager to dive into ambitious projects where I can contribute, grow, and make a meaningful impact.",
     meTextFour: "Currently, I'm looking for my first professional opportunity to collaborate with a dynamic team and work on challenging projects that push the boundaries of what web development can achieve. I'm confident that my passion, dedication, and drive to learn will make me valuable addition to any project.",
   },
   [PORTFOLIO]: {
@@ -36,7 +36,7 @@ export const enTranslations = {
     gameHubText: "This project was built alongside a tutorial to practice React with TypeScript",
   },
   [SKILLS]: {
-    textOne: "Since I started my journey as a Front-end student almost 3 years ago, I have learned a lot about and done some good personal projects and now I am looking for an opportunity to use what I have learned and learn more with a good team.",
+    textOne: "Since I started my journey as a Front-end developer almost 3 years ago, I have learned a lot about and done some good personal projects and now I am looking for an opportunity to use what I have learned and learn more with a good team.",
     textTwo: "All my projects are available on my Github profile and if you think I can be part of your team and we can team up you can contact me on my likedin profile.",
   },
   [CONTACT]: {
