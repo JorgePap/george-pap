@@ -7,7 +7,7 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",  // Keep this if Vite works fine with it
+    "moduleResolution": "node",  // Keep this if Vite works fine with it
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
