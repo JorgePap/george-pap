@@ -3,6 +3,18 @@ import { Iconography } from "@ui";
 import { ICONS } from "@domain";
 
 export const LinksSection: FC = () => {
+  const handleCvDownload = () => {
+    // Direct path to the CV in the public folder
+    const pdfUrl = `${import.meta.env.BASE_URL}my-cv.pdf`;
+
+    const link = document.createElement("a");
+    link.href = pdfUrl; // Ensure it points to a valid PDF file
+    link.download = "MyCV.pdf"; // Filename when downloaded
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="flex items-center justify-center gap-sm">
       <a
@@ -14,11 +26,6 @@ export const LinksSection: FC = () => {
                     fill-white"
           icon={ICONS.LINKEDIN_ICON}
         />
-        {/* <img
-          src={LinkedInLogo}
-          alt="LinkedIn Logo"
-          className="rounded-md w-[50px] h-[50px] md:w-[54px] md:h-[54px] lg:w-[64px] lg:h-[64px]"
-        /> */}
       </a>
       <a
         className="bg-[#4a66ba] p-md rounded-lg"
@@ -29,12 +36,17 @@ export const LinksSection: FC = () => {
                    fill-white"
           icon={ICONS.GITHUB_ICON}
         />
-        {/* <img
-          src={GitHubLogo}
-          alt="GitHub Logo"
-          className="rounded-md w-[50px] h-[50px] md:w-[54px] md:h-[54px] lg:w-[64px] lg:h-[64px]"
-        /> */}
       </a>
+      <div
+        onClick={handleCvDownload}
+        className="bg-[#4a66ba] p-md rounded-lg cursor-pointer"
+      >
+        <Iconography
+          classes="w-[24px] h-[24px] md:w-[30px] md:h-[30px] 
+                   fill-white"
+          icon={ICONS.CV_ICON}
+        />
+      </div>
     </div>
   );
 };

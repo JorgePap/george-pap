@@ -14,6 +14,8 @@ import GitHubIcon from "./GithubIcon";
 import LinkedInIcon from "./LinkedIn";
 import GreekFlag from "./GreekFlag";
 import ThreeJsIcon from "./ThreeJsIcon";
+import DownloadIcon from "./DownloadIcon";
+import CvIcon from "./CvIcon";
 
 export interface Props {
   icon: ICONS;
@@ -72,6 +74,10 @@ export const Iconography: FC<Props> = ({
       return <GreekFlag {...attributes} />;
     case ICONS.THREE_JS_ICON:
       return <ThreeJsIcon {...attributes} />;
+    case ICONS.DOWNLOAD_ICON:
+      return <DownloadIcon {...attributes} />;
+    case ICONS.CV_ICON:
+      return <CvIcon {...attributes} />;
     default:
       return <div></div>;
   }
