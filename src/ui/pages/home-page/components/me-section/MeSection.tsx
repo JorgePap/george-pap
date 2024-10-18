@@ -1,7 +1,7 @@
 import { ICONS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 import { FC } from "react";
 import { Iconography, Typography } from "@ui";
-// import MePhoto from "../../../../../assets/me.jpg";
+import MePhoto from "../../../../../assets/me.jpg";
 import { useTranslation } from "react-i18next";
 import { HOME } from "@translations";
 // import CV from "../../../../../assets/files/my-cv.pdf";
@@ -68,10 +68,12 @@ export const MeSection: FC = () => {
 
         <div className="flex basis-1/2 justify-center items-center">
           <img
+            src={MePhoto}
             className="border-[1px] border-neutral-2 dark:border-neutral-1 rounded-[70%_30%_30%_70%_/_60%_40%_60%_40%] w-[250px] h-[250px] mt-[40px] mb-[40px]
            md:w-[350px] md:h-[350px]
            lg:w-[400px] lg:h-[400px] lg:mt-[100px]
-           xl:w-[430px] xl:h-[430px] "
+           xl:w-[430px] xl:h-[430px] 
+           object-cover"
           />
         </div>
       </div>
