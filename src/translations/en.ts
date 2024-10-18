@@ -20,9 +20,9 @@ export const enTranslations = {
     iAmGeorge: "I'm George",
     lastName: "Papastergiopoulos",
     me: "About me",
-    meTextOne: "Hi, I'm George, and here's a bit about me. I'm 27 years old and a Front-End Developer based in Greece, with a strong passion for web development and a love for creating interactive and responsive web experiences. I'm always excited to explore new technologies and creative solutions.",
-    meTextTwo: "I constantly strive to stay updated on the latest trends and best practices in front-end development. I believe that continuous learning is key to growth, so I make it a point to expand my knowledge and refine my skills regularly. My goal is to deliver high-quality work that balances creativity and functionality, ensuring that users have a seamless and engaging experience.",
-    meTextThree: "I have a particular interest in React and enjoy leveraging its capabilities to build dynamic, user-friendly interfaces. I'm eager to dive into ambitious projects where I can contribute, grow, and make a meaningful impact.",
+    meTextOne: "Hi, I'm George, a 27-year-old Front-End Developer based in Greece, with a passion for creating engaging and interactive web experiences. I’ve been working with React and really enjoy its flexibility, but more than anything, I’m driven by a desire to keep learning and improving. I'm always excited to explore other frameworks like Angular and Vue, as I'm eager to dive deeper into the wide world of web development.",
+    meTextTwo: "For me, it's not about mastering one tool but about giving 100% to every project, continuously growing, and applying what I learn to build user-friendly, functional websites. I’m committed to staying up to date with the latest technologies and trends, always striving to deliver the best work I can.",
+    meTextThree: "I’m currently looking for my first professional opportunity, where I can contribute, collaborate, and keep pushing my skills forward. I'm confident that my dedication and willingness to learn will make me a valuable part of any team.",
     meTextFour: "Currently, I'm looking for my first professional opportunity to collaborate with a dynamic team and work on challenging projects that push the boundaries of what web development can achieve. I'm confident that my passion, dedication, and drive to learn will make me valuable addition to any project.",
   },
   [PORTFOLIO]: {

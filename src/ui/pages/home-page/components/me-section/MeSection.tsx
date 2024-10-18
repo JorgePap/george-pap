@@ -46,11 +46,6 @@ export const MeSection: FC = () => {
             variant={TYPOGRAPHY_VARIANT.P1}
             text={t("meTextThree", { ns: HOME })}
           />
-          <Typography
-            element={TYPOGRAPHY_ELEMENT.P}
-            variant={TYPOGRAPHY_VARIANT.P1}
-            text={t("meTextFour", { ns: HOME })}
-          />
 
           <div
             onClick={handleCvDownload}
