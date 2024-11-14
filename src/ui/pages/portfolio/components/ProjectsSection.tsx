@@ -47,6 +47,14 @@ export const ProjectsSection: FC = () => {
         style={{ backgroundImage: `url(${StratakisLabPhoto})` }}
       />
       <ProjectsItem
+        title={t("gameHub", { ns: PORTFOLIO })}
+        text={t("gameHubText", { ns: PORTFOLIO })}
+        href="https://game-hub-alpha-indol.vercel.app/"
+        techNames={["Vite", "React", "Typescript", "Tailwind", "Git"]}
+        classes="bg-cover bg-no-repeat"
+        style={{ backgroundImage: `url(${GameHubProjectPhoto})` }}
+      />
+      <ProjectsItem
         title={t("weather", { ns: PORTFOLIO })}
         text={t("weatherText", { ns: PORTFOLIO })}
         href="https://weather-site-peach.vercel.app/"
@@ -60,14 +68,6 @@ export const ProjectsSection: FC = () => {
         ]}
         classes="bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${WeatherSitePhoto})` }}
-      />
-      <ProjectsItem
-        title={t("gameHub", { ns: PORTFOLIO })}
-        text={t("gameHubText", { ns: PORTFOLIO })}
-        href="https://game-hub-alpha-indol.vercel.app/"
-        techNames={["Vite", "React", "Typescript", "Tailwind", "Git"]}
-        classes="bg-cover bg-no-repeat"
-        style={{ backgroundImage: `url(${GameHubProjectPhoto})` }}
       />
     </div>
   );

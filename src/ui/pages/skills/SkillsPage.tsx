@@ -3,22 +3,22 @@ import { RoutingButton, Typography } from "@ui";
 import { FC } from "react";
 import { SkillsAndXpSection } from "./components";
 import { useTranslation } from "react-i18next";
-import { SKILLS } from "@translations";
+import { NAVBAR, SKILLS } from "@translations";
 
 export const SkillsPage: FC = () => {
   const { t } = useTranslation();
 
   return (
     <div
-      className="h-dvh pt-[80px] md:pt-[110px] lg:pt-[140px] px-[30px] md:px-[115px] 
-                    lg:px-[125px] overflow-x-hidden relative"
+      className="h-dvh pt-[80px] md:pt-[110px] lg:pt-[140px] px-[30px] md:px-[115px]
+                 lg:px-[130px] xl:px-[150px] overflow-x-hidden relative"
     >
       <div className="flex flex-col gap-2xl">
         <div>
           <Typography
             element={TYPOGRAPHY_ELEMENT.H3}
             variant={TYPOGRAPHY_VARIANT.TITLE}
-            text="Skills &amp; Experience"
+            text={t("skillsAndExperience", { ns: SKILLS })}
             color="text-transparent text-stroke-black dark:text-stroke-white"
           />
         </div>
@@ -41,13 +41,13 @@ export const SkillsPage: FC = () => {
 
       <RoutingButton
         to={PATHS.PORTFOLIO}
-        text={"Portfolio"}
+        text={t("portfolio", { ns: NAVBAR })}
         left={true}
         routeIcon={ICONS.ARROW_LEFT}
       />
       <RoutingButton
         to={PATHS.CONTACT}
-        text={"Contact"}
+        text={t("contact", { ns: NAVBAR })}
         left={false}
         routeIcon={ICONS.ARROW_RIGHT}
       />

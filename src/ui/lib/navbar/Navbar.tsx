@@ -21,7 +21,7 @@ export const Navbar: FC<{ toogleTheme: () => void; darkMode: boolean }> = ({
   };
 
   return (
-    <nav className="fixed w-full z-40 md:pt-[20px] md:top-[0px] md:px-[110px] lg:px-[120px] bg-neutral-1 dark:bg-dark-1">
+    <nav className="fixed w-full z-40 md:pt-[20px] md:top-[0px] md:px-[115px] lg:px-[130px] xl:px-[150px] bg-neutral-1 dark:bg-dark-1">
       {/* navbar */}
       <div className="flex justify-end md:justify-start relative md:py-sm">
         {/* desktop nav */}

@@ -39,9 +39,9 @@ export const ProjectsItem: FC<{
           <div className={`${showMore && "rotate-180"}`}>
             <Iconography
               icon={ICONS.ARROW_UP}
-              width="18"
-              height="18"
-              classes="stroke-dark-1 dark:stroke-neutral-1"
+              width="24"
+              height="24"
+              classes="stroke-dark-1 dark:stroke-neutral-1 cursor-pointer"
               onClick={toggleShowMore}
             />
           </div>
@@ -50,7 +50,9 @@ export const ProjectsItem: FC<{
           element={TYPOGRAPHY_ELEMENT.P}
           variant={TYPOGRAPHY_VARIANT.P1}
           text={text}
-          classes="text-dark-1 dark:text-neutral-1"
+          classes={`text-dark-1 dark:text-neutral-1 ${
+            !showMore && "line-clamp-2"
+          }`}
         />
         {showMore && (
           <div>

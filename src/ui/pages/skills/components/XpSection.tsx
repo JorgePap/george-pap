@@ -8,10 +8,14 @@ import HTMLLogo from "../../../../assets/html.png";
 import GITLogo from "../../../../assets/git.png";
 import FIGMALogo from "../../../../assets/figma.png";
 import { Image } from "@ui";
+import { useTranslation } from "react-i18next";
+import { SKILLS } from "@translations";
 
 const XpSection: FC = () => {
+  const { t } = useTranslation();
+
   return (
-    <SkillsAndXpItem title="Experience">
+    <SkillsAndXpItem title={t("experience", { ns: SKILLS })}>
       <Image imageSrc={JsLogo} alt="JS-Logo" />
       <Image imageSrc={TSLogo} alt="TS-Logo" />
       <Image imageSrc={REACTLogo} alt="TS-Logo" />

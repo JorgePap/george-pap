@@ -12,7 +12,7 @@ export const RoutingButton: FC<{
   return (
     <div className="group hidden md:block">
       <div
-        className={`flex flex-col md:w-[85px] lg:w-[100px] 
+        className={`flex flex-col md:w-[100px] lg:w-[125px] xl:w-[140px]
           justify-center items-center gap-md px-lg 
           fixed h-screen top-[0px] bottom-[0px] 
           h-full neutral-1 dark:bg-dark-1 rounded-l-lg z-40
@@ -34,7 +34,7 @@ export const RoutingButton: FC<{
       <NavLink
         to={to}
         replace
-        className={`flex flex-col md:w-[85px] lg:w-[100px] 
+        className={`flex flex-col md:w-[100px] lg:w-[125px] xl:w-[140px]
               justify-center items-center gap-md px-lg bg-neutral-5 dark:bg-[#6272A4]
               fixed h-screen top-0 bottom-0 transform z-50
               ease-in-out duration-200 group-hover:translate-x-[0px]

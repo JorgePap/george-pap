@@ -21,7 +21,7 @@ export const HeroSection: FC<{ onClick: () => void }> = ({ onClick }) => {
           <Typography
             element={TYPOGRAPHY_ELEMENT.P}
             variant={TYPOGRAPHY_VARIANT.BUTTON_SM}
-            text="Scroll down"
+            text={t("scroll", { ns: HOME })}
             classes="cursor-pointer"
           />
         </div>

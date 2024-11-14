@@ -27,13 +27,13 @@ export const AllLinks: FC<{
       />
       <CustomNavLink
         to={PATHS.SKILLS}
-        title={t("Skills", { ns: NAVBAR })}
+        title={t("skills", { ns: NAVBAR })}
         typographyElement={typographyElement}
         typographyVariant={typographyVariant}
       />
       <CustomNavLink
         to={PATHS.CONTACT}
-        title={t("Contact", { ns: NAVBAR })}
+        title={t("contact", { ns: NAVBAR })}
         typographyElement={typographyElement}
         typographyVariant={typographyVariant}
       />

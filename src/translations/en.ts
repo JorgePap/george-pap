@@ -19,6 +19,7 @@ export const enTranslations = {
     hello: "Hello",
     iAmGeorge: "I'm George",
     lastName: "Papastergiopoulos",
+    scroll: "Scroll down",
     me: "About me",
     meTextOne: "Hi, I'm George, a 27-year-old Front-End Developer based in Greece, with a passion for creating engaging and interactive web experiences. I’ve been working with React and really enjoy its flexibility, but more than anything, I’m driven by a desire to keep learning and improving. I'm always excited to explore other frameworks like Angular and Vue, as I'm eager to dive deeper into the wide world of web development.",
     meTextTwo: "For me, it's not about mastering one tool but about giving 100% to every project, continuously growing, and applying what I learn to build user-friendly, functional websites. I’m committed to staying up to date with the latest technologies and trends, always striving to deliver the best work I can.",
@@ -26,6 +27,7 @@ export const enTranslations = {
     meTextFour: "Currently, I'm looking for my first professional opportunity to collaborate with a dynamic team and work on challenging projects that push the boundaries of what web development can achieve. I'm confident that my passion, dedication, and drive to learn will make me valuable addition to any project.",
   },
   [PORTFOLIO]: {
+    portfolio: "Portfolio",
     kardias: "Kardias",
     kardiasText: "Kardias is a streamlined system for efficient house rental management *(takes some seconds on first render)",
     stratakisLab: "Stratakis Lab",
@@ -36,6 +38,10 @@ export const enTranslations = {
     gameHubText: "This project was built alongside a tutorial to practice React with TypeScript",
   },
   [SKILLS]: {
+    experience: "Experience",
+    learning: "Learning",
+    wantTo: "Want To",
+    skillsAndExperience: "Skills & Experience",
     textOne: "Since I started my journey as a Front-end developer almost 3 years ago, I have learned a lot about and done some good personal projects and now I am looking for an opportunity to use what I have learned and learn more with a good team.",
     textTwo: "All my projects are available on my Github profile and if you think I can be part of your team and we can team up you can contact me on my likedin profile.",
   },
@@ -45,5 +51,6 @@ export const enTranslations = {
     email: "Email",
     subject: "Subject",
     message: "Message",
+    submit: "Submit",
   },
 };

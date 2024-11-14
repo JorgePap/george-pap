@@ -5,6 +5,8 @@ import * as yup from "yup";
 import { useFormik } from "formik";
 import { useTranslation } from "react-i18next";
 import { CONTACT } from "@translations";
+import { Typography } from "@ui";
+import { TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
 
 const validationSchema = yup.object({
   name: yup.string().required("Name is required"),
@@ -99,7 +101,11 @@ export const FormSection: FC = () => {
         type="submit"
         className="w-full max-w-[250px] py-md self-center bg-[#4a66ba] dark:bg-[#6272A4] rounded-lg text-neutral-1"
       >
-        Submit
+        <Typography
+          element={TYPOGRAPHY_ELEMENT.P}
+          variant={TYPOGRAPHY_VARIANT.P1_BOLD}
+          text={t("submit", { ns: CONTACT })}
+        />
       </button>
     </form>
   );
