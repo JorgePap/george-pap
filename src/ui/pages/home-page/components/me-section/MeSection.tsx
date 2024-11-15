@@ -15,7 +15,7 @@ export const MeSection: FC = () => {
 
     const link = document.createElement("a");
     link.href = pdfUrl; // Ensure it points to a valid PDF file
-    link.download = "MyCV.pdf"; // Filename when downloaded
+    link.download = "GIORGOS-PAPASTERGIOPOULOS-CV.pdf"; // Filename when downloaded
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
