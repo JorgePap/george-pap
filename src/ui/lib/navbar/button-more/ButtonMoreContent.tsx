@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Typography } from "../../typography";
 import {
   ICONS,
@@ -20,15 +20,27 @@ export const ButtonMoreContent: FC<{
   const { t } = useTranslation();
   const [languageIsOpen, setLanguageIsOpen] = useState(false);
 
+  // Retrieve and set the initial language from localStorage on mount
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage && savedLanguage !== i18next.language) {
+      i18next.changeLanguage(savedLanguage);
+    }
+  }, []);
+
+  // Change language to Greek and save to localStorage
   const changeLanguageToGreek = () => {
     if (i18next.language !== LANGUAGES.GR) {
       i18next.changeLanguage(LANGUAGES.GR);
+      localStorage.setItem("language", LANGUAGES.GR);
     }
   };
 
+  // Change language to English and save to localStorage
   const changeLanguageToEnglish = () => {
     if (i18next.language !== LANGUAGES.EN) {
       i18next.changeLanguage(LANGUAGES.EN);
+      localStorage.setItem("language", LANGUAGES.EN);
     }
   };
 
