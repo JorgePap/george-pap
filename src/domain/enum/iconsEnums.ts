@@ -14,5 +14,6 @@ export enum ICONS {
     GREEK_FLAG = "GreekFlag",
     THREE_JS_ICON = "ThreeJsIcon",
     DOWNLOAD_ICON = "DownloadIcon",
-    CV_ICON = "CvIcon"
+    CV_ICON = "CvIcon",
+    SCROLL_DOWN = "ScrollDown"
 }

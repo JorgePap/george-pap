@@ -1,5 +1,5 @@
-import { TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
-import { Typography } from "@ui";
+import { ICONS, TYPOGRAPHY_ELEMENT, TYPOGRAPHY_VARIANT } from "@domain";
+import { Iconography, Typography } from "@ui";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import HoverText from "./HoverText";
@@ -17,12 +17,18 @@ export const HeroSection: FC<{ onClick: () => void }> = ({ onClick }) => {
       </div>
       {/* Scroll down Starts */}
       <div className="flex justify-between pb-[30px] md:pb-[50px] lg:pb-[50px]">
-        <div onClick={onClick}>
+        <div
+          className="flex w-max items-center gap-xs cursor-pointer"
+          onClick={onClick}
+        >
           <Typography
             element={TYPOGRAPHY_ELEMENT.P}
             variant={TYPOGRAPHY_VARIANT.BUTTON_SM}
             text={t("scroll", { ns: HOME })}
-            classes="cursor-pointer"
+          />
+          <Iconography
+            classes="w-[34px] h-[34px] dark:fill-neutral-1"
+            icon={ICONS.SCROLL_DOWN}
           />
         </div>
         <Typography

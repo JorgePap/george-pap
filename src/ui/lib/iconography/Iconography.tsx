@@ -16,6 +16,7 @@ import GreekFlag from "./GreekFlag";
 import ThreeJsIcon from "./ThreeJsIcon";
 import DownloadIcon from "./DownloadIcon";
 import CvIcon from "./CvIcon";
+import ScrollDown from "./ScrollDown";
 
 export interface Props {
   icon: ICONS;
@@ -30,7 +31,6 @@ export interface Props {
 
 export const Iconography: FC<Props> = ({
   icon,
-  //   size = "24",
   width = "1rem",
   height = "1rem",
   onClick,
@@ -78,6 +78,8 @@ export const Iconography: FC<Props> = ({
       return <DownloadIcon {...attributes} />;
     case ICONS.CV_ICON:
       return <CvIcon {...attributes} />;
+    case ICONS.SCROLL_DOWN:
+      return <ScrollDown {...attributes} />;
     default:
       return <div></div>;
   }
