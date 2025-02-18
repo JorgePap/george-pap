@@ -34,7 +34,7 @@ export const ProjectsSection: FC = () => {
       <ProjectsItem
         title={t("stratakisLab", { ns: PORTFOLIO })}
         text={t("stratakisLabText", { ns: PORTFOLIO })}
-        href="https://stratakis-lab.onrender.com/"
+        href="https://stratakislab-dev.iesl.forth.gr/"
         techNames={[
           "Vite",
           "React",
